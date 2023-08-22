@@ -12,4 +12,17 @@ Contents:
 
 Chapter 01: Cascade, specificity, and inheritence
 
+Summary
+- Keep selector specificity under control.
+- Don’t confuse cascade with inheritance.
+- Certain properties are inherited, including those for text, lists, and table borders.
+- Don’t confuse initial and auto values.
+- Stay out of TRouBLe with shorthand properties.
 
+Chapter 02 : Working with realtive units
+
+This chapter covers
+- The versatility of relative units
+- How to use ems and rems, without letting them drive you mad
+- Using viewport-relative units
+- An introduction to CSS variables
