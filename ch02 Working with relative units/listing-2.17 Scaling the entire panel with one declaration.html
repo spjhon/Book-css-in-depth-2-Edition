@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
   <style>
+    /* Creating a larger version of the panel, page 42*/
     :root {
       font-size: 0.85em;
     }
@@ -20,21 +21,36 @@
     }
 
     .panel {
+      font-size: 1rem;
       padding: 1em;
       border: 1px solid #999;
       border-radius: 0.5em;
     }
+
     .panel > h2 {
       margin-top: 0;
-      font-size: 0.8rem;
+      font-size: 0.8em;
       font-weight: bold;
       text-transform: uppercase;
     }
+
+    .panel.large { 
+      font-size: 1.2rem;
+    }
+    
   </style>
 </head>
 
 <body>
   <div class="panel">
+    <h2>Single-origin</h2>
+    <div class="body">
+      We have built partnerships with small farms around the world to
+      hand-select beans at the peak of season. We then carefully roast in
+      <a href="/batch-size.html">small batches</a> to maximize their potential.
+    </div>
+  </div>
+  <div class="panel large">
     <h2>Single-origin</h2>
     <div class="body">
       We have built partnerships with small farms around the world to

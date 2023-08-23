@@ -1,47 +1,25 @@
 <!doctype html>
 <head>
   <style>
+    /*Defining a custom property, page 49*/
     :root {
-      font-size: calc(0.5em + 1vw);
-      --main-bg: #fff;
-      --main-color: #000;
-    }
-
-    body {
-      font-family: Helvetica, Arial, sans-serif;
-    }
-
-    .panel {
-      font-size: 1rem;
-      padding: 1em;
-      border: 1px solid #999;
-      border-radius: 0.5em;
-      background-color: var(--main-bg);
-      color: var(--main-color);
-    }
-
-    .panel > h2 {
-      margin-top: 0;
-      font-size: 0.8em;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    .panel.large {
-      font-size: 1.2em;
-    }
+ --main-font: Helvetica, Arial, sans-serif;
+}
+p { 
+ font-family: var(--main-font); 
+} 
   </style>
 </head>
 
 <body>
   <div class="panel">
     <h2>Single-origin</h2>
-    <div class="body">
+    <p class="body">
       We have built partnerships with small farms
       around the world to hand-select beans at the
       peak of season. We then carefully roast in
       small batches to maximize their potential.
-    </div>
+    </p>
   </div>
 
   <aside class="dark">
