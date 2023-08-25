@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <head>
   <style>
-    /*HTML for page with a two-column layout, page 56*/
+    /*Using calc() to subtract the gutter from the width, page 63*/
+
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    ::before,
+    ::after {
+      box-sizing: inherit;
+    }
+
     body {
       background-color: #eee;
       font-family: Helvetica, Arial, sans-serif;
@@ -12,25 +23,21 @@
       border-radius: 0.5em;
     }
     .main {
-      box-sizing: border-box;
       float: left;
       width: 70%;
       background-color: #fff;
       border-radius: 0.5em;
     }
     .sidebar {
-      box-sizing: border-box;
       float: left;
-      width: 30%;
+      width: calc(30% - 1.5em); /*Subtracts 1.5 em from the width . . .*/
+      margin-left: 1.5em; /*. . . and adds it as a margin*/
+
       padding: 1.5em;
       background-color: #fff;
       border-radius: 0.5em;
     }
-    .sidebar {
-      padding: 1.5em;
-      background-color: #fff;
-      border-radius: 0.5em;
-    }
+
   </style>
 </head>
 <body>
