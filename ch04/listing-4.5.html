@@ -1,104 +1,113 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <style>
-      *,
-      ::before,
-      ::after {
-        box-sizing: border-box;
-      }
+<!doctype html>
+<head>
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
 
-      :root {
-        --gap-size: 1.5rem;
-      }
+    *,
+    ::before,
+    ::after {
+      box-sizing: inherit;
+    }
 
-      body {
-        margin: unset;
-        background-color: #709b90;
-        font-family: Helvetica, Arial, sans-serif;
-      }
+    body {
+      background-color: #eee;
+      font-family: Helvetica, Arial, sans-serif;
+    }
 
-      .stack > * + * {
-        margin-block-start: 1.5em;
-      }
+    body * + * {
+      margin-top: 1.5em;
+    }
 
-      .container {
-        max-inline-size: 1080px;
-        margin-inline: auto;
-      }
+    header {
+      padding: 1em 1.5em;
+      color: #fff;
+      background-color: #0072b0;
+      border-radius: .5em;
+      margin-bottom: 1.5em;
+    }
 
-      .site-nav {
-        display: flex;
-        gap: var(--gap-size);
-        padding: 0.5rem;
-        list-style-type: none;
-        background-color: #5f4b44;
-      }
+    .main {
+      padding: 0 1.5em;
+      background-color: #fff;
+      border-radius: .5em;
+    }
 
-      .site-nav > li > a {
-        display: block;
-        padding: 0.5em 1em;
-        background-color: #cc6b5a;
-        color: white;
-        text-decoration: none;
-      }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
 
-      .site-nav > .nav-right {
-        margin-inline-start: auto;
-      }
-    </style>
-  </head>
+    .media {
+      float: left;
+      width: 50%;
+      padding: 1.5em;
+      background-color: #eee;
+      border-radius: 0.5em;
+    }
+  </style>
+</head>
 
-  <body>
-    <div class="container">
-      <header>
-        <h1>Ink</h1>
-      </header>
-      <nav>
-        <ul class="site-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/features">Features</a></li>
-          <li><a href="/pricing">Pricing</a></li>
-          <li><a href="/support">Support</a></li>
-          <li class="nav-right">
-            <a href="/about">About</a>
-          </li>
-        </ul>
-      </nav>
-      <main class="flex">
-        <div class="column-main tile">
-          <h1>Team collaboration done right</h1>
-          <p>
-            Thousands of teams from all over the world turn to <b>Ink</b> to
-            communicate and get things done.
-          </p>
-        </div>
-        <div class="column-sidebar">
-          <div class="tile">
-            <form class="login-form">
-              <h3>Login</h3>
-              <p>
-                <label for="username">Username</label>
-                <input id="username" type="text" name="username" />
-              </p>
-              <p>
-                <label for="password">Password</label>
-                <input id="password" type="password" name="password" />
-              </p>
-              <button type="submit">Login</button>
-            </form>
-          </div>
-          <div class="tile centered stack">
-            <small>Starting at</small>
-            <div class="cost">
-              <span class="cost-currency">$</span>
-              <span class="cost-dollars">20</span>
-              <span class="cost-cents">.00</span>
-            </div>
-            <a class="cta-button" href="/pricing"> Sign up </a>
+<body>
+  <div class="container">
+    <header>
+      <h1>Franklin Running Club</h1>
+    </header>
+
+    <main class="main clearfix">
+      <h2>Running tips</h2>
+
+      <div>
+        <div class="media">
+          <img class="media-image" src="runner.png">
+          <div class="media-body">
+            <h4>Strength</h4>
+            <p>
+              Strength training is an important part of
+              injury prevention. Focus on your core&mdash;
+              especially your abs and glutes.
+            </p>
           </div>
         </div>
-      </main>
-    </div>
-  </body>
-</html>
+
+        <div class="media">
+          <img class="media-image" src="shoes.png">
+          <div class="media-body">
+            <h4>Cadence</h4>
+            <p>
+              Check your stride turnover. The most efficient
+              runners take about 180 steps per minute.
+            </p>
+          </div>
+        </div>
+
+        <div class="media">
+          <img class="media-image" src="shoes.png">
+          <div class="media-body">
+            <h4>Change it up</h4>
+            <p>
+              Don't run the same every time you hit the
+              road. Vary your pace, and vary the distance
+              of your runs.
+            </p>
+          </div>
+        </div>
+
+        <div class="media">
+          <img class="media-image" src="runner.png">
+          <div class="media-body">
+            <h4>Focus on form</h4>
+            <p>
+              Run tall but relaxed. Your feet should hit
+              the ground beneath your hips, not out in
+              front of you.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div style="clear: both"></div>
+    </main>
+  </div>
+</body>

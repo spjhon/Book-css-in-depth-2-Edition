@@ -1,87 +1,74 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <style>
-      .modal {
-        display: none;
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive table example</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
 
-        &.is-open {
-          display: block;
-        }
+    th, td {
+      border: 1px solid black;
+      padding: 0.3em 0.5em;
+    }
+
+
+    table {
+      width: 100%;
+    }
+
+    @media (max-width: 30em) {
+      table, thead, tbody, tr, th, td {
+        display: block;
       }
 
-      .modal-backdrop {
-        position: fixed;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-      }
-
-      .modal-body {
-        position: fixed;
-        inset-block: 3em;
-        inset-inline: 20%;
-        padding: 2em 3em;
-        background-color: white;
-        overflow: auto;
-        z-index: 2;
-      }
-
-      .modal-close {
+      thead tr {
         position: absolute;
-        top: 0.3em;
-        right: 0.3em;
-        padding: 0.3em;
-        border: 0;
-        cursor: pointer;
-        font-size: 2em;
-        height: 1em;
-        width: 1em;
-        text-indent: 10em;
-        overflow: hidden;
-        background-color: transparent;
+        top: -9999px;
+        left: -9999px;
       }
 
-      .modal-close::after {
-        position: absolute;
-        line-height: 0.5;
-        top: 0.2em;
-        left: 0.1em;
-        text-indent: 0;
-        content: "\00D7";
+      tr {
+        margin-bottom: 1em;
       }
-    </style>
-  </head>
-  <body class="l-homepage">
-    <button id="open">Open Modal</button>
-    <div class="modal" id="modal" role="dialog" aria-modal="true">
-      <div class="modal-backdrop"></div>
-      <div class="modal-body">
-        <button type="button" class="modal-close" id="close">close</button>
-        <h2>Wombat Newsletter</h2>
-        <p>Sign up for our monthly newsletter. No spam. We promise!</p>
-        <form>
-          <p>
-            <label for="email">Email address:</label>
-            <input type="text" name="email" />
-          </p>
-          <p><button type="submit">Submit</button></p>
-        </form>
-      </div>
-    </div>
+    }
+  </style>
+</head>
 
-    <script type="text/javascript">
-      const button = document.getElementById("open");
-      const close = document.getElementById("close");
-      const modal = document.getElementById("modal");
+<body>
 
-      button.addEventListener("click", function (event) {
-        modal.classList.add("is-open");
-      });
+  <table>
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Region/Farm</th>
+        <th>Tasting notes</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nicaragua</td>
+        <td>Matagulpa</td>
+        <td>Dark chocolate, almond</td>
+        <td>$13.95</td>
+      </tr>
+      <tr>
+        <td>Ethiopia</td>
+        <td>Yirgacheffe</td>
+        <td>Sweet tea, blueberry</td>
+        <td>$15.95</td>
+      </tr>
+      <tr>
+        <td>Ethiopia</td>
+        <td>Nano Challa</td>
+        <td>Tangerine, jasmine</td>
+        <td>$14.95</td>
+      </tr>
+    </tbody>
+  </table>
 
-      close.addEventListener("click", function (event) {
-        modal.classList.remove("is-open");
-      });
-    </script>
-  </body>
+</body>
 </html>

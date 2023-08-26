@@ -1,142 +1,204 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <style>
-      body {
-        font-family: Helvetica, Arial, sans-serif;
-        min-height: 200vh;
-        margin: 0;
-      }
+<!doctype html>
+<head>
+  <style>
+  :root {
+    box-sizing: border-box;
+  }
 
-      body.no-scroll {
-        overflow: hidden;
-      }
+  *,
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
 
-      button,
-      input {
-        font: inherit;
-      }
+  body {
+    background-color: #709b90;
+    font-family: Helvetica, Arial, sans-serif;
+  }
 
-      button {
-        padding: 0.5em 0.7em;
-        border: 1px solid #8d8d8d;
-        background-color: #eee;
-        border-radius: 5px;
-        cursor: pointer;
-      }
+  .container {
+    display: grid;
+    grid-template-columns: [left-start] 2fr
+                           [left-end right-start] 1fr
+                           [right-end];
+    grid-template-rows: repeat(4, [row] auto);
+    grid-gap: 1.5em;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
 
-      .top-banner {
-        padding: 0.5em;
-        background-color: #ffd698;
-        box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
-      }
+  header,
+  nav {
+    grid-column: left-start / right-end;
+    grid-row: span 1;
+  }
 
-      .top-banner-inner {
-        width: 80%;
-        max-inline-size: 1000px;
-        margin-inline: auto;
-      }
+  .main {
+    grid-column: left;
+    grid-row: row 3 / span 2;
+  }
 
-      .container {
-        width: 80%;
-        max-inline-size: 1000px;
-        margin-inline: auto;
-      }
+  .sidebar-top {
+    grid-column: right;
+    grid-row: 3 / 4;
+  }
 
-      .modal {
-        display: none;
-      }
+  .sidebar-bottom {
+    grid-column: right;
+    grid-row: 4 / 5;
+  }
 
-      .modal.is-open {
-        display: block;
-      }
+  .tile {
+    padding: 1.5em;
+    background-color: #fff;
+  }
 
-      .modal-backdrop {
-        position: fixed;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-      }
+  .tile > :first-child {
+    margin-top: 0;
+  }
 
-      .modal-body {
-        position: fixed;
-        inset-block: 3em;
-        inset-inline: 20%;
-        padding: 2em 3em;
-        background-color: white;
-        overflow: auto;
-      }
+  .tile * + * {
+    margin-top: 1.5em;
+  }
 
-      .modal-close {
-        position: absolute;
-        top: 0.3em;
-        right: 0.3em;
-        padding: 0.3em;
-        border: 0;
-        cursor: pointer;
-        font-size: 2em;
-        height: 1em;
-        width: 1em;
-        text-indent: 10em;
-        overflow: hidden;
-        background-color: transparent;
-      }
+  .page-heading {
+    margin: 0;
+  }
 
-      .modal-close::after {
-        position: absolute;
-        line-height: 0.5;
-        top: 0.2em;
-        left: 0.1em;
-        text-indent: 0;
-        content: "\00D7";
-      }
-    </style>
-  </head>
+  .site-nav {
+    display: flex;
+    margin: 0;
+    padding: .5em;
+    background-color: #5f4b44;
+    list-style-type: none;
+    border-radius: .2em;
+  }
 
-  <body>
-    <header class="top-banner">
-      <div class="top-banner-inner">
-        <p>
-          Find out what's going on at Wombat Coffee each month. Sign up for our
-          newsletter:
-          <button id="open">Sign up</button>
-        </p>
-      </div>
+  .site-nav > li {
+    margin-top: 0;
+  }
+
+  .site-nav > li > a {
+    display: block;
+    padding: .5em 1em;
+    background-color: #cc6b5a;
+    color: white;
+    text-decoration: none;
+  }
+
+  .site-nav > li + li {
+    margin-left: 1.5em;
+  }
+
+  .site-nav > .nav-right {
+    margin-left: auto;
+  }
+
+  .login-form h3 {
+    margin: 0;
+    font-size: .9em;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  .login-form input:not([type=checkbox]):not([type=radio]) {
+    display: block;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .login-form button {
+    margin-top: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    padding: .5em 1em;
+    cursor: pointer;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  .cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: .7;
+  }
+
+  .cost > span {
+    margin-top: 0;
+  }
+
+  .cost-currency {
+    font-size: 2rem;
+  }
+  .cost-dollars {
+    font-size: 4rem;
+  }
+  .cost-cents {
+    font-size: 1.5rem;
+    align-self: flex-start;
+  }
+
+  .cta-button {
+    display: block;
+    background-color: #cc6b5a;
+    color: white;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="page-heading">Ink</h1>
     </header>
-    <div class="modal" id="modal" role="dialog" aria-modal="true">
-      <div class="modal-backdrop"></div>
-      <div class="modal-body">
-        <button class="modal-close" id="close">close</button>
-        <h2>Wombat Newsletter</h2>
-        <p>Sign up for our monthly newsletter. No spam. We promise!</p>
-        <form>
-          <p>
-            <label for="email">Email address:</label>
-            <input type="text" name="email" />
-          </p>
-          <p><button type="submit">Submit</button></p>
-        </form>
-      </div>
-    </div>
-    <main class="container">
-      <h1>Wombat Coffee Roasters</h1>
+    <nav>
+      <ul class="site-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/features">Features</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/support">Support</a></li>
+        <li class="nav-right">
+          <a href="/about">About</a>
+        </li>
+      </ul>
+    </nav>
+    <main class="main tile">
+      <h1>Team collaboration done right</h1>
+      <p>Thousands of teams from all over the
+        world turn to <b>Ink</b> to communicate
+        and get things done.</p>
     </main>
-
-    <script type="text/javascript">
-      var button = document.getElementById("open");
-      var close = document.getElementById("close");
-      var modal = document.getElementById("modal");
-
-      button.addEventListener("click", function (event) {
-        event.preventDefault();
-        modal.classList.add("is-open");
-        document.body.classList.add("no-scroll");
-      });
-
-      close.addEventListener("click", function (event) {
-        event.preventDefault();
-        modal.classList.remove("is-open");
-        document.body.classList.remove("no-scroll");
-      });
-    </script>
-  </body>
-</html>
+    <div class="sidebar-top tile">
+      <form class="login-form">
+        <h3>Login</h3>
+        <p>
+          <label for="username">Username</label>
+          <input id="username" type="text"
+            name="username"/>
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input id="password" type="password"
+            name="password"/>
+        </p>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div class="sidebar-bottom tile centered">
+      <small>Starting at</small>
+      <div class="cost">
+        <span class="cost-currency">$</span>
+        <span class="cost-dollars">20</span>
+        <span class="cost-cents">.00</span>
+      </div>
+      <a class="cta-button" href="/pricing">
+        Sign up
+      </a>
+    </div>
+  </div>
+</body>
