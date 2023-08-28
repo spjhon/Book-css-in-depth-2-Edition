@@ -48,7 +48,8 @@ Summary
 - Avoid explicitly setting the height of an element to avoid overflow issues.
 - Use modern layout techniques like display: table or a flexbox to produce columns of equal height or to vertically center content.
 - If your margins behave oddly, take steps to prevent margins from collapsing.
-- Consider using the lobotomized owl selector on your page to globally apply margins between stacked elements.
+- Consider using the lobotomized owl selector on your page to globally apply margins between stacked elements. (That is, it selects all elements on the page that aren’t the
+first child of their parent, so margin can be apply)
 
 Chapter 04: Making sense of floats
 
