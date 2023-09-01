@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /* Floating the four media boxes to the left*/
     :root {
       box-sizing: border-box;
     }
@@ -40,17 +41,12 @@
     }
 
     .media {
+      /*unlike elements in the normal document flow, floated elements do not add height to their parent element*/
       float: left;
       width: 50%;
       padding: 1.5em;
       background-color: #eee;
       border-radius: 0.5em;
-    }
-
-    .clearfix::after {
-      display: block;
-      content: " ";
-      clear: both;
     }
   </style>
 </head>
@@ -111,6 +107,7 @@
             </p>
           </div>
         </div>
+
       </div>
     </main>
   </div>

@@ -1,6 +1,10 @@
 <!doctype html>
 <head>
   <style>
+    /* Using clearfix to contain floats*/
+    /*By using the
+::after pseudo-element selector, you can effectively insert an element into the DOM
+at the end of the container, without adding it to the markup*/
     :root {
       box-sizing: border-box;
     }
@@ -45,6 +49,12 @@
       padding: 1.5em;
       background-color: #eee;
       border-radius: 0.5em;
+    }
+
+    .clearfix::after { /*Targets the pseudo-element at the end of the container*/
+      display: block; /*A non-inline display value and a content value cause the pseudoelement to appear in the document.*/
+      content: " ";
+      clear: both; /*Makes the pseudo-element clear all floats in the container*/
     }
   </style>
 </head>
@@ -105,9 +115,7 @@
             </p>
           </div>
         </div>
-
       </div>
-      <div style="clear: both"></div>
     </main>
   </div>
 </body>
