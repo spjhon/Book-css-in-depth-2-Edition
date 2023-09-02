@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /* Using the :nth-child() selector to target every odd media element */
     :root {
       box-sizing: border-box;
     }
@@ -47,7 +48,7 @@
       border-radius: 0.5em;
     }
 
-    .media:nth-child(odd) {
+    .media:nth-child(odd) { /*Each new row clears the row above*/
       clear: left;
     }
 
