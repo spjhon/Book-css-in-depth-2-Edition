@@ -2,15 +2,14 @@
 <head>
   <style>
     /* Using clearfix to contain floats*/
-    /*By using the
-::after pseudo-element selector, you can effectively insert an element into the DOM
-at the end of the container, without adding it to the markup*/
+    /*By using the :after pseudo-element selector, you can effectively insert an element into the DOM at the end of the container, without adding it to the markup*/
+    /*In float margins DONT COLAPSE*/
     :root {
       box-sizing: border-box;
     }
 
     *,
-    ::before,
+    ::before, /*before and after works whit some elements, self-closing elements dont work*/
     ::after {
       box-sizing: inherit;
     }

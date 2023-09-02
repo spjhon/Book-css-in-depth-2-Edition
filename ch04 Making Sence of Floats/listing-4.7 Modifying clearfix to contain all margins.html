@@ -1,13 +1,14 @@
 <!doctype html>
 <head>
   <style>
+    /*Modifying clearfix to contain all margins*/
     :root {
       box-sizing: border-box;
     }
 
     *,
     ::before,
-    ::after {
+    ::after { 
       box-sizing: inherit;
     }
 
@@ -48,11 +49,12 @@
     }
 
     .clearfix::before,
-    .clearfix::after {
-      display: table;
+    .clearfix::after {/*Causes both ::before and ::after pseudo elements to appear*/
+      display: table; /*Prevents margins from collapsing 
+      through the pseudo elements*/
       content: " ";
     }
-    .clearfix::after {
+    .clearfix::after { /*Only the ::after pseudo element needs to clear floats*/
       clear: both;
     }
   </style>
