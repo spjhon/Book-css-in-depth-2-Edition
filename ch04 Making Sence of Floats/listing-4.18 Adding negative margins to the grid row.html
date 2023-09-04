@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /*Adding negative margins to the grid row, page 112*/
     :root {
       box-sizing: border-box;
     }
@@ -21,6 +22,8 @@
     }
 
     .row {
+      margin-left: -0.75em;
+      margin-right: -0.75em;
     }
 
     .row::after {
@@ -31,6 +34,8 @@
 
     [class*="column-"] {
       float: left;
+      padding: 0 0.75em;
+      margin-top: 0;
     }
 
     .column-1 { width: 8.3333%; }
@@ -69,6 +74,7 @@
       padding: 1.5em;
       background-color: #eee;
       border-radius: 0.5em;
+      min-height: 10em;
     }
 
     .media-image {

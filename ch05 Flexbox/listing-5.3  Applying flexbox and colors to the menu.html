@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /* Applying flexbox and colors to the menu, page 121*/
     :root {
       box-sizing: border-box;
     }
@@ -26,20 +27,20 @@
     }
 
     .site-nav {
-      display: flex;
+      display: flex; /*Makes site-nav the flex container and its children the flex items*/
       padding-left: 0;
       background-color: #5f4b44;
-      list-style-type: none;
+      list-style-type: none; /*Removes the left padding and list bullets in the user agent styles*/
     }
 
     .site-nav > li {
-      margin-top: 0;
+      margin-top: 0; /*Overrides the lobotomized owl top margin*/
     }
 
     .site-nav > li > a {
-      background-color: #cc6b5a;
+      background-color: #cc6b5a; 
       color: white;
-      text-decoration: none;
+      text-decoration: none; /*Removes the underline from link text in the user agent styles*/
     }
 
   </style>

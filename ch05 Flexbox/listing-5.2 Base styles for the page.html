@@ -2,7 +2,7 @@
 <head>
   <style>
     :root {
-      box-sizing: border-box;
+      box-sizing: border-box; /*Global box-sizing fix (chapter 3)*/
     }
 
     *,
@@ -13,46 +13,29 @@
 
     body {
       background-color: #709b90;
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: Helvetica, Arial, sans-serif; /*Sets green background color and sans-serif font for the page*/
     }
 
     body * + * {
-      margin-top: 1.5em;
+      margin-top: 1.5em; /*Global margins (chapter 3)*/
     }
 
     .container {
-      max-width: 1080px;
+      max-width: 1080px; /*Double-container to center page contents (chapter 4)*/
       margin: 0 auto;
     }
-
-    .site-nav {
-      display: flex;
-      padding: .5em;
-      background-color: #5f4b44;
-      list-style-type: none;
-      border-radius: .2em;
-    }
-
-    .site-nav > li {
-      margin-top: 0;
-    }
-
-    .site-nav > li > a {
-      display: block;
-      padding: .5em 1em;
-      background-color: #cc6b5a;
-      color: white;
-      text-decoration: none;
-    }
-
   </style>
 </head>
 
 <body>
+
   <div class="container">
+
     <header>
       <h1>Ink</h1>
     </header>
+
+
     <nav>
       <ul class="site-nav">
         <li><a href="/">Home</a></li>
@@ -64,14 +47,19 @@
         </li>
       </ul>
     </nav>
+
+
     <main class="flex">
+
       <div class="column-main tile">
         <h1>Team collaboration done right</h1>
         <p>Thousands of teams from all over the
           world turn to <b>Ink</b> to communicate
           and get things done.</p>
       </div>
+
       <div class="column-sidebar">
+
         <div class="tile">
           <form class="login-form">
             <h3>Login</h3>
@@ -88,6 +76,7 @@
             <button type="submit">Login</button>
           </form>
         </div>
+        
         <div class="tile centered">
           <small>Starting at</small>
           <div class="cost">
@@ -99,7 +88,11 @@
             Sign up
           </a>
         </div>
+
       </div>
+
     </main>
+
+
   </div>
 </body>
