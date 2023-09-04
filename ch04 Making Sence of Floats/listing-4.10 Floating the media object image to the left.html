@@ -1,6 +1,15 @@
 <!doctype html>
 <head>
   <style>
+    /*Floating the media object image to the left, page 102*/
+
+    /*You can establish a new block formatting context in several ways. Applying any of
+the following property values to an element triggers one:
+- float: left or float: right—anything but none
+- overflow: hidden, auto, or scroll—anything but visible
+- display: inline-block, table-cell, table-caption, flex, inline-flex,
+grid, or inline-grid—these are called block containers.
+- position: absolute or position: fixed*/
     :root {
       box-sizing: border-box;
     }
@@ -52,17 +61,15 @@
       clear: left;
     }
 
-    .media-image {
+    .media-image { /*Floats image to the left*/
       float: left;
-      margin-right: 1.5em;
     }
 
-    .media-body {
-      overflow: auto;
+    .media-body { /*Removes the top margin applied by the lobotomized owl*/
       margin-top: 0;
     }
 
-    .media-body h4 {
+    .media-body h4 { /*Overrides the top margin applied by user agent styles*/
       margin-top: 0;
     }
 

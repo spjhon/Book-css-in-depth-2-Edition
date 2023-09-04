@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /*CSS for the grid columns, page 109*/
     :root {
       box-sizing: border-box;
     }
@@ -23,7 +24,7 @@
     .row {
     }
 
-    .row::after {
+    .row::after { /*Replicates the clearfix so the row contains its floated columns*/      
       content: " ";
       display: block;
       clear: both;

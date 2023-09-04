@@ -49,13 +49,13 @@
     }
 
     .media:nth-child(odd) { /*Each new row clears the row above*/
-      clear: left;
+      clear: both;
     }
 
     .clearfix::before,
     .clearfix::after {
       display: table;
-      content: " ";
+      content: " table";
     }
     .clearfix::after {
       clear: both;

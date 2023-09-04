@@ -1,6 +1,9 @@
 <!doctype html>
 <head>
   <style>
+    /* Adding overflow auto triggers a new block formatting context, page 105*/
+/*OJO, con overflow se le puede eliminar el efecto flow a los contenedores y crear un nuevo bloque*/
+
     :root {
       box-sizing: border-box;
     }
@@ -54,9 +57,11 @@
 
     .media-image {
       float: left;
+      margin-right: 1.5em; /*Adds a margin to the image to insert space between it and the body*/
     }
 
     .media-body {
+      overflow: auto; /*Establishes a new block formatting context so the body doesn’t overlap the floated image*/      
       margin-top: 0;
     }
 

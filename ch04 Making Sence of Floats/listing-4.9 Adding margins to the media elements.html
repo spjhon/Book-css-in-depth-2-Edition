@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /*Adding margins to the media elements, page 101*/
     :root {
       box-sizing: border-box;
     }
@@ -41,8 +42,9 @@
 
     .media {
       float: left;
-      margin: 0 1.5em 1.5em 0;
-      width: calc(50% - 1.5em);
+      margin: 0 1.5em 1.5em 0; /*Adds a right and bottom margin to each media element*/
+      width: calc(50% - 1.5em); /*Subtracts the margin from the width to avoid unwanted line wrapping*/      
+     
       padding: 1.5em;
       background-color: #eee;
       border-radius: 0.5em;
