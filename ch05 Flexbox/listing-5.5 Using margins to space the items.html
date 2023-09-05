@@ -45,26 +45,12 @@
       text-decoration: none;
     }
 
-    .site-nav > li + li {
+    .site-nav > li + li { /*Targets every list item that follows another list item (that is, all but the first)*/
       margin-left: 1.5em;
     }
 
-    .site-nav > .nav-right {
+    .site-nav > .nav-right { /*Auto margins inside a flexbox will fill the available space.*/
       margin-left: auto;
-    }
-
-    .tile {
-      padding: 1.5em;
-      background-color: #fff;
-    }
-
-    .flex {
-      display: flex;
-    }
-
-    .flex > * + * {
-      margin-top: 0;
-      margin-left: 1.5em;
     }
 
   </style>

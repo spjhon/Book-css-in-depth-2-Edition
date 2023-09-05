@@ -53,6 +53,20 @@
       margin-left: auto;
     }
 
+    .tile {
+      padding: 1.5em; /*Adds a background color and padding to the three tiles*/
+      background-color: #fff;
+    }
+
+    .flex { /*Applies a flexbox layout to the main container*/
+      display: flex;
+    }
+
+    .flex > * + * {
+      margin-top: 0; /*Removes the top margin and applies space between the flex items*/
+      margin-left: 1.5em;
+    }
+
   </style>
 </head>
 
