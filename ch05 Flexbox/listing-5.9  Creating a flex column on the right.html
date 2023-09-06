@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /* Creating a flex column on the right, PAGE 132*/
     :root {
       box-sizing: border-box;
     }
@@ -68,11 +69,17 @@
     }
 
     .column-main {
-      flex: 66.67%;
+      flex: 2;
     }
 
-    .column-sidebar {
-      flex: 33.33%;
+    .column-sidebar { /*A flex item for the outer flexbox and a flex container for the new inner one*/
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .column-sidebar > .tile { /*Applies flex-grow to the items within*/
+      flex: 1;
     }
 
   </style>
@@ -97,6 +104,18 @@
     <main class="flex">
       <div class="column-main tile">
         <h1>Team collaboration done right</h1>
+        <p>Thousands of teams from all over the
+          world turn to <b>Ink</b> to communicate
+          and get things done.</p>
+        <h1>Communication around the globe</h1>
+        <p>Thousands of teams from all over the
+          world turn to <b>Ink</b> to communicate
+          and get things done.</p>
+        <h1>Instant access to your team's documents</h1>
+        <p>Thousands of teams from all over the
+          world turn to <b>Ink</b> to communicate
+          and get things done.</p>
+        <h1>Intuitive interface</h1>
         <p>Thousands of teams from all over the
           world turn to <b>Ink</b> to communicate
           and get things done.</p>
