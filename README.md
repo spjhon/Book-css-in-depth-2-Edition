@@ -79,6 +79,23 @@ This chapter covers
 - Element sizes in flexbox
 - Element alignment in flexbox
 
+Summary
+- Use flexbox for versatile, easy-to-control layout of page content.
+- Autoprefixer can simplify flexbox support for older browsers.
+- Use flex to specify almost any imaginable combination of flex item sizes.
+- Use nested flexboxes to piece together more complicated layouts and to fill the heights of naturally sized boxes.
+- Flexbox automatically creates columns of equal height.
+- Use align-items or align-self to vertically center a flex item inside its flex container.
+
+Chapter 06: Grid Layout
+
+This chapter covers
+- Using CSS’ first true layout system—grid
+- Understanding grid layout options
+- Laying out items on a grid
+- Using flexbox and grid together to build a cohesive web page layout
+
+
 
 
 

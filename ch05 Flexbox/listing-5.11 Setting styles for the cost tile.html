@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /*Setting styles for the cost tile, page 141*/
     :root {
       box-sizing: border-box;
     }
@@ -107,26 +108,27 @@
       text-align: center;
     }
 
-    .cost {
+    .cost { /*Centers flex items on both the main and cross axes*/
       display: flex;
       justify-content: center;
       align-items: center;
       line-height: .7;
     }
 
-    .cost > span {
+    .cost > span { /*Overrides margins from the lobotomized owl*/
       margin-top: 0;
     }
 
     .cost-currency {
       font-size: 2rem;
     }
-    .cost-dollars {
+    .cost-dollars { /*Sets different font sizes for each part of the cost*/
       font-size: 4rem;
     }
     .cost-cents {
       font-size: 1.5rem;
-      align-self: flex-start;
+      align-self: flex-start; /*Overrides align-items for this item, aligning it to the top instead of center
+*/
     }
 
     .cta-button {
@@ -161,7 +163,8 @@
         <h1>Team collaboration done right</h1>
         <p>Thousands of teams from all over the
           world turn to <b>Ink</b> to communicate
-          and get things done.</p>
+          and get things done.
+</p>
       </div>
       <div class="column-sidebar">
         <div class="tile">

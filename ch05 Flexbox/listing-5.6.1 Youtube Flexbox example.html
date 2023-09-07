@@ -11,6 +11,7 @@
     <style>
       /* BASE STYLES */
       /*from the video https://www.youtube.com/watch?v=phWxA89Dy94*/
+      /*The section has a height value of 100vh because by default elements like section and div only take up the height needed for their child elements to be displayed properly.*/
       :root {
         --clr-dark: #0f172a;
         --clr-light: #f1f5f9;
@@ -31,22 +32,17 @@
         font-family: "Roboto", sans-serif;
         color: var(--clr-dark);
         background-color: var(--clr-light);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
       }
 
       .container {
-        width: 80%;
-        height: 700px;
-        margin: 0 auto;
+        max-width: 620px;
+        /*margin: 0 auto; /*OJO CON ESTA PROPIEDAD SE PUEDE CENTRAR UN DIV EN COMBINACION CON EL WIDTH*/
         border: 10px solid var(--clr-dark);
       }
 
       .item {
         width: 150px;
-        height: 150px;
+        min-height: 150px;
         background-color: #fb7185;
         padding: 1em;
         font-weight: 700;
@@ -59,6 +55,15 @@
       /* END OF BASE STYLES */
       .container {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+
+      .prueba{
+        
+        width: 150px;
+        margin: 0 auto;
       }
     </style>
   </head>
@@ -67,6 +72,9 @@
       <div class="item item-1">Item 1</div>
       <div class="item item-2">Item 2</div>
       <div class="item item-3">Item 3</div>
+    </div>
+    <div class="prueba">
+      <div class="item item-1">EJEMPLO DE COMO CENTRAR UN DIV</div>
     </div>
 
     <script src="" async defer></script>
