@@ -1,6 +1,8 @@
 <!doctype html>
 <head>
   <style>
+  /*A grid with six items, page 147*/
+/* Laying out a basic grid*/
   :root {
     box-sizing: border-box;
   }
@@ -12,10 +14,11 @@
   }
 
   .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0.5em;
+    
+    display: grid; /*Makes the element a grid container*/
+    grid-template-columns: 1fr 1fr 1fr; /*Defines three columns of equal width*/
+    grid-template-rows: 1fr 1fr; /*Defines two rows of equal height*/
+    grid-gap: 0.5em; /*Applies a gutter between each grid cell*/
   }
 
   .grid > * {
