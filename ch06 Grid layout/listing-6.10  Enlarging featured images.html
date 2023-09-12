@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /* Enlarging featured images, PAGE 168*/
     :root {
       box-sizing: border-box;
     }
@@ -21,6 +22,7 @@
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       grid-auto-rows: 1fr;
       grid-gap: 1em;
+      grid-auto-flow: dense; /*Enables the dense grid placement algorithm*/
     }
 
     .portfolio > figure {
@@ -36,6 +38,11 @@
       background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
       text-align: right;
+    }
+
+    .portfolio .featured {
+      grid-row: span 2;
+      grid-column: span 2; /*Enlarges featured images to span two grid tracks in each direction*/
     }
 
   </style>

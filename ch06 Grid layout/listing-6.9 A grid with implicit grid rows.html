@@ -1,6 +1,9 @@
 <!doctype html>
 <head>
   <style>
+    /*A grid with implicit grid rows, PAGE 165*/
+    /*See http://gridbyexample.com/examples/example37/ for an example of the difference. */
+
     :root {
       box-sizing: border-box;
     }
@@ -18,14 +21,13 @@
 
     .portfolio {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-auto-rows: 1fr;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*Sets a minimum column width of 200 px and auto-fills the grid*/
+      grid-auto-rows: 1fr; /*Sets an implicit horizontal grid track size of 1 fr*/
       grid-gap: 1em;
-      grid-auto-flow: dense;
     }
 
     .portfolio > figure {
-      margin: 0;
+      margin: 0; /*Overrides user agent margins*/
     }
 
     .portfolio img {
@@ -39,25 +41,20 @@
       text-align: right;
     }
 
-    .portfolio .featured {
-      grid-row: span 2;
-      grid-column: span 2;
-    }
-
   </style>
 </head>
 
 <body>
   <div class="portfolio">
-    <figure class="featured">
-      <img src="images/monkey.jpg" alt="monkey" />
+    <figure class="featured"> <!--Each <figure> will be a grid item.-->
+      <img src="images/monkey.jpg" alt="monkey" /> <!--Encloses the image and its caption inside the <figure> element-->
       <figcaption>Monkey</figcaption>
     </figure>
     <figure>
       <img src="images/eagle.jpg" alt="eagle" />
       <figcaption>Eagle</figcaption>
     </figure>
-    <figure class="featured">
+    <figure class="featured"> <!--The featured class will make certain images larger.-->
       <img src="images/bird.jpg" alt="bird" />
       <figcaption>Bird</figcaption>
     </figure>
