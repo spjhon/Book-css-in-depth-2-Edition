@@ -95,6 +95,21 @@ This chapter covers
 - Laying out items on a grid
 - Using flexbox and grid together to build a cohesive web page layout
 
+Summary
+- Grid is excellent for a high-level layout of the web page (but it is not limitedto that).
+- You can use grid in conjunction with flexbox for a complete layout system.
+- You should use whichever syntax (numbered grid lines, named grid lines, or named grid areas) is the most intuitive for you and the given situation.
+- You can use auto-fill/auto-fit and the implicit grid for layouts with a large or unknown number of grid items.
+- You can use feature queries for progressive enhancement.
+
+Chapter 07: Positioning and stacking contexts
+
+This chapter covers
+- The types of element positioning: fixed, relative, and absolute
+- Building modal dialogs and dropdown menus
+- CSS triangles
+- Understanding z-index and stacking contexts
+- A new type of positioning: sticky
 
 
 

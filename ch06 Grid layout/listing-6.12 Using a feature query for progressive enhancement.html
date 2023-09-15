@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /*Using a feature query for progressive enhancement, page 173*/
     :root {
       box-sizing: border-box;
     }
@@ -16,24 +17,15 @@
       font-family: Helvetica, Arial, sans-serif;
     }
 
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-auto-rows: 1fr;
-      grid-gap: 1em;
-      grid-auto-flow: dense;
-    }
-
-    .portfolio > figure {
-      display: flex;
-      flex-direction: column;
+    .portfolio > figure { /*Uses inline-block for the fallback layout*/
+      display: inline-block;
+      max-width: 300px;
       margin: 0;
     }
 
     .portfolio img {
-      flex: 1;
-      object-fit: cover;
       width: 100%; /* UPDATED to fix layout in Chrome 76+ */
+      object-fit: cover;
     }
 
     .portfolio figcaption {
@@ -43,9 +35,29 @@
       text-align: right;
     }
 
-    .portfolio .featured {
-      grid-row: span 2;
-      grid-column: span 2;
+    @supports (display: grid) { /*Feature query for grid support*/
+      .portfolio {
+        display: grid; /*Puts all grid layout styles within feature query block*/
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 1em;
+        grid-auto-flow: dense;
+      }
+
+      .portfolio > figure {
+        display: flex;
+        flex-direction: column;
+        max-width: initial; /*Overrides fallback styles*/
+      }
+
+      .portfolio img {
+        flex: 1;
+      }
+
+      .portfolio .featured {
+        grid-row: span 2;
+        grid-column: span 2;
+      }
     }
 
   </style>
