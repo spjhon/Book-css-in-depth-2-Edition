@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
   <style>
     body {
@@ -8,7 +8,7 @@
     }
 
     button {
-      padding: .5em .7em;
+      padding: 0.5em 0.7em;
       border: 1px solid #8d8d8d;
       background-color: white;
       font-size: 1em;
@@ -55,6 +55,21 @@
       right: 0.3em;
       padding: 0.3em;
       cursor: pointer;
+      font-size: 2em;
+      height: 1em;
+      width: 1em; /*Makes the button a small square*/
+      text-indent: -10em; /*Forces the text to overflow the element and hides it*/
+      overflow: hidden; 
+      border: 0;
+    }
+
+    .modal-close::after {
+      position: absolute;
+      line-height: 0.5;
+      top: 0.2em;
+      left: 0.1em;
+      text-indent: 0; /*Toca ponerlo debido a que el text-ident se hereda del padre donde esta puesto en -10em*/
+      content: "\00D7";  /*Adds the unicode character U+00D7 (multiplication sign)*/
     }
   </style>
 </head>
@@ -62,8 +77,9 @@
 <body>
   <header class="top-banner">
     <div class="top-banner-inner">
-      <p>Find out what's going on at Wombat Coffee each
-        month. Sign up for our newsletter:
+      <p>
+        Find out what's going on at Wombat Coffee each month. Sign up for our
+        newsletter:
         <button id="open">Sign up</button>
       </p>
     </div>
@@ -71,14 +87,13 @@
   <div class="modal" id="modal">
     <div class="modal-backdrop"></div>
     <div class="modal-body">
-      <button class="modal-close" id="close">close</button>
+      <button class="modal-close" id="close"></button>
       <h2>Wombat Newsletter</h2>
-      <p>Sign up for our monthly newsletter. No spam.
-         We promise!</p>
+      <p>Sign up for our monthly newsletter. No spam. We promise!</p>
       <form>
         <p>
           <label for="email">Email address:</label>
-          <input type="text" name="email"/>
+          <input type="text" name="email" />
         </p>
         <p><button type="submit">Submit</button></p>
       </form>
@@ -86,18 +101,18 @@
   </div>
 
   <script type="text/javascript">
-  var button = document.getElementById('open');
-var close = document.getElementById('close');
-var modal = document.getElementById('modal');
+    var button = document.getElementById("open");
+    var close = document.getElementById("close");
+    var modal = document.getElementById("modal");
 
-button.addEventListener('click', function(event) {
-  event.preventDefault();
-  modal.style.display = 'block';
-});
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      modal.style.display = "block";
+    });
 
-close.addEventListener('click', function(event) {
-  event.preventDefault();
-  modal.style.display = 'none';
-});
-</script>
+    close.addEventListener("click", function (event) {
+      event.preventDefault();
+      modal.style.display = "none";
+    });
+  </script>
 </body>

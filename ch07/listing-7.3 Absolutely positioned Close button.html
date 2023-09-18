@@ -1,6 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
   <style>
+    /*Absolutely positioned Close button, PAGE 183*/
     body {
       font-family: Helvetica, Arial, sans-serif;
       min-height: 200vh;
@@ -8,7 +9,7 @@
     }
 
     button {
-      padding: .5em .7em;
+      padding: 0.5em 0.7em;
       border: 1px solid #8d8d8d;
       background-color: white;
       font-size: 1em;
@@ -50,28 +51,13 @@
     }
 
     .modal-close {
+      /*Absolutely positioned Close button*/
+      /*OJO, la posicion absoluta funciona solo ante un padre que esta en una posicion fixed, sino se va hasta que encuentre uno*/
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 0.3em;
+      right: 0.3em;
       padding: 0.3em;
-      font-size: 2em;
-      height: 1.5em;
-      width: 1.5em;
       cursor: pointer;
-      border: 0;
-    }
-    .modal-close::before {
-      display: block;
-      content: '\00D7';
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
     }
   </style>
 </head>
@@ -79,8 +65,9 @@
 <body>
   <header class="top-banner">
     <div class="top-banner-inner">
-      <p>Find out what's going on at Wombat Coffee each
-        month. Sign up for our newsletter:
+      <p>
+        Find out what's going on at Wombat Coffee each month. Sign up for our
+        newsletter:
         <button id="open">Sign up</button>
       </p>
     </div>
@@ -88,16 +75,13 @@
   <div class="modal" id="modal">
     <div class="modal-backdrop"></div>
     <div class="modal-body">
-      <button class="modal-close" id="close">
-        <span class="sr-only">close</span>
-      </button>
+      <button class="modal-close" id="close">close</button>
       <h2>Wombat Newsletter</h2>
-      <p>Sign up for our monthly newsletter. No spam.
-         We promise!</p>
+      <p>Sign up for our monthly newsletter. No spam. We promise!</p>
       <form>
         <p>
           <label for="email">Email address:</label>
-          <input type="text" name="email"/>
+          <input type="text" name="email" />
         </p>
         <p><button type="submit">Submit</button></p>
       </form>
@@ -105,18 +89,18 @@
   </div>
 
   <script type="text/javascript">
-  var button = document.getElementById('open');
-var close = document.getElementById('close');
-var modal = document.getElementById('modal');
+    let button = document.getElementById("open");
+    let close = document.getElementById("close");
+    let modal = document.getElementById("modal");
 
-button.addEventListener('click', function(event) {
-  event.preventDefault();
-  modal.style.display = 'block';
-});
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      modal.style.display = "block";
+    });
 
-close.addEventListener('click', function(event) {
-  event.preventDefault();
-  modal.style.display = 'none';
-});
-</script>
+    close.addEventListener("click", function (event) {
+      event.preventDefault();
+      modal.style.display = "none";
+    });
+  </script>
 </body>
