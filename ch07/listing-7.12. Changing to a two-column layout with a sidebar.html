@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /* Creating a two-column layout and sticky-position side menu*/
     body {
       font-family: Helvetica, Arial, sans-serif;
       min-height: 200vh;
@@ -77,9 +78,11 @@
     }
 
     .container {
+      display: flex; /*Makes the container a flex container for the two-column layout*/
       width: 80%;
       max-width: 1000px;
-      margin: 1em auto
+      margin: 1em auto;
+      min-height: 100vh; /*Artificially adds height to the container*/
     }
 
     .dropdown {
@@ -141,6 +144,19 @@
       background-color: #fff;
     }
 
+    .col-main { /*Lays out the two columns*/
+      flex: 1 80%;
+    }
+
+    .col-sidebar {
+      flex: 20%;
+    }
+
+    .affix { /*Applies sticky positioning to the side menu. It will dock 1 em from the top of the viewport.*/
+      position: sticky;
+      top: 1em;
+    }
+
   </style>
 </head>
 
@@ -172,7 +188,8 @@
     </div>
   </div>
 
-  <div class="container">
+<div class="container">
+  <main class="col-main"> <!--Wraps existing content in a col-main for the main column-->
     <nav>
       <div class="dropdown">
         <div class="dropdown-label">Main Menu</div>
@@ -187,9 +204,21 @@
         </div>
       </div>
     </nav>
-
     <h1>Wombat Coffee Roasters</h1>
-  </div>
+  </main>
+
+  <aside class="col-sidebar"> <!--Adds a second column with an affix element inside it-->
+    <div class="affix">
+      <ul class="submenu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/coffees">Coffees</a></li>
+        <li><a href="/brewers">Brewers</a></li>
+        <li><a href="/specials">Specials</a></li>
+        <li><a href="/about">About us</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
 
   <script type="text/javascript">
   var button = document.getElementById('open');

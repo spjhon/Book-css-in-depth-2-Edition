@@ -1,6 +1,8 @@
 <!doctype html>
 <head>
   <style>
+    /*Stacking contexts example*/
+    /*Creating the stacking contexts*/
     :root {
       box-sizing: border-box;
       font-family: Helvetica, Arial, sans-serif;
@@ -41,7 +43,7 @@
 
     .positioned {
       position: relative;
-      background-color: #5ae;
+      background-color: #5ae; /*Each positioned box establishes a stacking context with z-index of 1.*/
       z-index: 1;
     }
 
@@ -52,7 +54,7 @@
       height: 2em;
       background-color: #fff;
       border: 2px dashed #888;
-      z-index: 100;
+      z-index: 100; /*A z-index only controls the element’s stacking position within its stacking context.*/
       line-height: initial;
       padding: 1em;
     }

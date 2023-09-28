@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /*Adding z-indexes to the modal dialog to bring it in front of the dropdown, page 193*/
     body {
       font-family: Helvetica, Arial, sans-serif;
       min-height: 200vh;
@@ -36,7 +37,7 @@
       bottom: 0;
       left: 0;
       background-color: rgba(0, 0, 0, 0.5);
-      z-index: 1;
+      z-index: 1; /*Brings the backdrop in front of elements without a z-index, with this all its children are inside the STAKING CONTEXT*/
     }
 
     .modal-body {
@@ -48,7 +49,7 @@
       padding: 2em 3em;
       background-color: white;
       overflow: auto;
-      z-index: 2;
+      z-index: 2; /*Brings the modal-body in front of the backdrop*/
     }
 
     .modal-close {
@@ -77,11 +78,9 @@
     }
 
     .container {
-      display: flex;
       width: 80%;
       max-width: 1000px;
-      margin: 1em auto;
-      min-height: 100vh;
+      margin: 1em auto
     }
 
     .dropdown {
@@ -143,19 +142,6 @@
       background-color: #fff;
     }
 
-    .col-main {
-      flex: 1 80%;
-    }
-
-    .col-sidebar {
-      flex: 20%;
-    }
-
-    .affix {
-      position: sticky;
-      top: 1em;
-    }
-
   </style>
 </head>
 
@@ -187,8 +173,7 @@
     </div>
   </div>
 
-<div class="container">
-  <main class="col-main">
+  <div class="container">
     <nav>
       <div class="dropdown">
         <div class="dropdown-label">Main Menu</div>
@@ -203,21 +188,9 @@
         </div>
       </div>
     </nav>
-    <h1>Wombat Coffee Roasters</h1>
-  </main>
 
-  <aside class="col-sidebar">
-    <div class="affix">
-      <ul class="submenu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/coffees">Coffees</a></li>
-        <li><a href="/brewers">Brewers</a></li>
-        <li><a href="/specials">Specials</a></li>
-        <li><a href="/about">About us</a></li>
-      </ul>
-    </div>
-  </aside>
-</div>
+    <h1>Wombat Coffee Roasters</h1>
+  </div>
 
   <script type="text/javascript">
   var button = document.getElementById('open');
