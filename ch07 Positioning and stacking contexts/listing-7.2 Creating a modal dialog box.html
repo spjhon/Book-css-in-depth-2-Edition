@@ -30,7 +30,8 @@ not positioned.*/
       margin: 0 auto;
     }
 
-    .modal {
+    .modal,
+    .modal2 {
       display: none; /*Hides the modal by default; JavaScript will set display: block when it opens the modal.*/
     }
 
@@ -56,6 +57,7 @@ not positioned.*/
       overflow: auto; /*Allows the modal body to scroll, if necessary*/
     }
 
+
     .modal-close {
       cursor: pointer;
     }
@@ -65,6 +67,7 @@ not positioned.*/
 <body>
 
   <header class="top-banner">
+
     <div class="top-banner-inner">
       <p>
         Find out what's going on at Wombat Coffee each month. Sign up for our
@@ -72,7 +75,10 @@ not positioned.*/
         <button id="open">Sign up</button>
       </p>
     </div>
+
   </header>
+
+
   <div class="modal" id="modal">
     <div class="modal-backdrop"></div>
     <div class="modal-body">
@@ -103,6 +109,8 @@ not positioned.*/
     close.addEventListener("click", function (event) {
       /*Closes the modal when the user clicks the Close button*/ event.preventDefault();
       modal.style.display = "none";
+      modal2.style.display = "none";
+
     });
   </script>
 
