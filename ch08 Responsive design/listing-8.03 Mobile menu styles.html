@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Wombat Coffee Roasters</title>
   <style>
+    /*Mobile menu styles page 210*/
     :root {
       box-sizing: border-box;
       font-size: calc(1vw + 0.6em);
@@ -83,6 +84,60 @@
       margin-bottom: 1.5em;
       font-size: 0.875rem;
       text-transform: uppercase;
+    }
+
+    /*
+     * Menu
+     */
+    .menu {
+      position: relative; /*Establishes containing block for both absolutely positioned children*/
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: -1.2em; /*A negative top pulls the button up outside its containing block.*/
+      right: 0.1em;
+      border: 0; /*Overrides user agent button styles*/
+      background-color: transparent;
+      font-size: 3em;
+      width: 1em;
+      height: 1em;
+      line-height: 0.4;
+      text-indent: 5em; /*Hides the text content of the button and fixes its size at 1 em*/
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .menu-toggle::after {
+      position: absolute;
+      top: 0.2em;
+      left: 0.2em;
+      display: block;
+      content: "\2261"; /*Overlays the button with a unicode symbol, the hamburger icon*/
+      text-indent: 0;
+    }
+
+    .menu-dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: 0;
+    }
+
+    .menu.is-open .menu-dropdown { /*Displays the dropdown menu when the class is-open is added to the menu*/
+      display: block;
+    }
+
+    /*
+     * Hero image
+     */
+    .hero {
+      padding: 2em 1em;
+      text-align: center;
+      background-image: url(coffee-beans.jpg);
+      background-size: 100%;
+      color: #fff;
+      text-shadow: 0.1em 0.1em 0.3em #000;
     }
 
   </style>
