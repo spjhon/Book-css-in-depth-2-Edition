@@ -101,20 +101,20 @@
       border: 0; /*Overrides user agent button styles*/
       background-color: transparent;
       font-size: 3em;
-      width: 1em;
-      height: 1em;
-      line-height: 0.4;
-      text-indent: 5em; /*Hides the text content of the button and fixes its size at 1 em*/
-      white-space: nowrap;
+      width: 0.6em;
+      height: 0.57em;
       overflow: hidden;
+      padding: 0;
     }
-    .menu-toggle::after {
-      position: absolute;
-      top: 0.2em;
-      left: 0.2em;
+    
+    .menu-toggle::before {
       display: block;
       content: "\2261"; /*Overlays the button with a unicode symbol, the hamburger icon*/
-      text-indent: 0;
+      line-height: 0.61;
+    }
+
+    .menu-toggle:hover{
+      cursor: pointer;
     }
 
     .menu-dropdown {
@@ -154,9 +154,7 @@
   </header>
 
   <nav class="menu" id="main-menu">
-    <button class="menu-toggle" id="toggle-menu">
-      toggle menu
-    </button>
+    <button class="menu-toggle" id="toggle-menu">Menu Toggle</button>
     <div class="menu-dropdown">
       <ul class="nav-menu">
         <li><a href="/about.html">About</a></li>
