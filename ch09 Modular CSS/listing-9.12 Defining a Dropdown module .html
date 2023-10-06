@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Modular CSS</title>
+  <link rel="stylesheet" href="./normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    /*Constructing a dropdown menu from two modules, page 245*/
+    /*Defining a Dropdown module */
     :root {
       box-sizing: border-box;
     }
@@ -20,7 +24,7 @@
 
     .dropdown {
       display: inline-block;
-      position: relative;
+      position: relative; /*Establishes containing block for the absolutely positioned drawer*/
     }
 
     .dropdown__toggle {
@@ -36,34 +40,33 @@
       right: 1em;
       top: 1em;
       border: 0.3em solid;
-      border-color: black transparent transparent;
+      border-color: black transparent transparent; /*Draws the triangle using borders (chapter 7)*/
     }
 
     .dropdown__drawer {
-      display: none;
+      display: none; /*Hides the drawer initially, then displays it when the is-open class is present*/
       position: absolute;
       left: 0;
       top: 2.1em;
       min-width: 100%;
-      background-color: #eee;
+      background-color: #eee; 
     }
 
     .dropdown.is-open .dropdown__toggle::after {
       top: 0.7em;
-      border-color: transparent transparent black;
+      border-color: transparent transparent black; /*Inverts the triangle while the dropdown is open*/
     }
     .dropdown.is-open .dropdown__drawer {
       display: block;
     }
-
   </style>
 </head>
 
 <body>
 <div class="dropdown">
-  <button class="dropdown__toggle">Main Menu</button>
-  <div class="dropdown__drawer">
-    <ul class="menu">
+  <button class="dropdown__toggle">Main Menu</button> <!--Toggle button for the dropdown-->
+  <div class="dropdown__drawer"> <!--A drawer sub-element serves as the menu container-->
+    <ul class="menu"> <!--A Menu module placed inside the drawer-->
       <li><a href="/">Home</a></li>
       <li><a href="/coffees">Coffees</a></li>
       <li><a href="/brewers">Brewers</a></li>
@@ -75,10 +78,10 @@
 
 <script type="text/javascript">
   (function () {
-    var toggle = document.querySelector('.dropdown__toggle');
-    toggle.addEventListener('click', function (event) {
+    let toggle = document.querySelector('.dropdown__toggle');
+    toggle.addEventListener('click', function (event) { /*Toggles the is-open class when the toggle button is clicked*/
       event.preventDefault();
-      var dropdown = event.target.parentNode;
+      let dropdown = event.target.parentNode;
       dropdown.classList.toggle('is-open');
     });
   }());

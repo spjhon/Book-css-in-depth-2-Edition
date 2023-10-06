@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Modular CSS</title>
+  <link rel="stylesheet" href="./normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    /*Menu module styles, page 248*/
     :root {
       box-sizing: border-box;
     }
@@ -56,18 +59,20 @@
       display: block;
     }
 
+
+    /*Here began a new module*/
     .menu {
       padding-left: 0;
       margin: 0;
-      list-style-type: none;
-      border: 1px solid #999;
+      list-style-type: none; /*Overrides user agent styles to remove list bullets*/
+      border: 1px solid #999; /*Adds a border between each link*/
     }
 
     .menu > li + li {
       border-top: 1px solid #999;
     }
 
-    .menu > li > a {
+    .menu > li > a { /*Styles large clickable links*/
       display: block;
       padding: 0.5em 1.5em;
       background-color: #eee;
@@ -75,7 +80,7 @@
       text-decoration: none;
     }
 
-    .menu > li > a:hover {
+    .menu > li > a:hover { /*Adds highlight on hover*/
       background-color: #fff;
     }
 

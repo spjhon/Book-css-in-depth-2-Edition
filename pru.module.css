@@ -1,0 +1,11 @@
+.container{
+    margin: 0 auto;
+    border: 8px solid #bb341f;
+    max-width: 20em;
+}
+
+.container--button {
+    border: 8px solid ;
+    padding: 1em;
+    margin: 1em;
+}

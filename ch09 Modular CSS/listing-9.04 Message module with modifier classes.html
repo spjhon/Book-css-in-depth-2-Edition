@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Modular CSS</title>
+  <link rel="stylesheet" href="./normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     :root {
@@ -18,7 +20,7 @@
       font-family: Helvetica, Arial, sans-serif;
     }
 
-    .message {
+    .message { /*Base Message module*/
       padding: 0.8em 1.2em;
       border-radius: 0.2em;
       border: 1px solid #265559;
@@ -26,19 +28,19 @@
       background-color: #e0f0f2;
     }
 
-    .message--success {
+    .message--success { /*Success modifier changes message to green.*/
       color: #2f5926;
       border-color: #2f5926;
       background-color:  #cfe8c9;
     }
 
-    .message--warning {
+    .message--warning { /*Warning modifier changes message to yellow.*/
       color: #594826;
       border-color: #594826;
       background-color:  #e8dec9;
     }
 
-    .message--error {
+    .message--error { /*Error modifier changes message to red.*/
       color: #59262f;
       border-color: #59262f;
       background-color:  #e8c9cf;

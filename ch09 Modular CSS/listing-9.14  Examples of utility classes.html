@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Modular CSS</title>
+  <link rel="stylesheet" href="./normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    /* Examples of utility classes*/
     :root {
       box-sizing: border-box;
     }
@@ -18,15 +21,15 @@
       font-family: Helvetica, Arial, sans-serif;
     }
 
-    .text-center {
+    .text-center { /*Centers text within a container*/
       text-align: center !important;
     }
 
-    .float-left {
+    .float-left { /*Floats an element left*/
       float: left;
     }
 
-    .clearfix::before,
+    .clearfix::before, /*Clearfix*/
     .clearfix::after {
         content: " ";
         display: table;
@@ -37,7 +40,7 @@
     }
 
     .hidden {
-      display: none !important;
+      display: none !important; /*Hides an element on the page*/
     }
   </style>
 </head>
@@ -47,7 +50,7 @@
     Centered text
   </div>
   <p class="clearfix">
-    <img src="runner.png" class="float-left" />
+    <img src="runner.png" class="float-left" alt="image"/>
     A paragraph that, if long enough, would wrap around the image.
   </p>
 </body>

@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wombat Coffee Roasters</title>
   <style>
+    /* Adding a responsive background image, page 228*/
     :root {
       box-sizing: border-box;
       font-size: calc(1vw + 0.6em);
+    }
+
+    @media (min-width: 50em) {
+      :root {
+        font-size: 1.125em;
+      }
     }
 
     *,
@@ -47,6 +54,18 @@
       background-color: #fff;
     }
 
+    @media (min-width: 35em) {
+      .page-header {
+        padding: 1em;
+      }
+    }
+
+    @media (min-width: 50em) {
+      .page-header {
+        padding: 1em 4em;
+      }
+    }
+
     .title > h1 {
       color: #333;
       text-transform: uppercase;
@@ -72,18 +91,45 @@
     .hero {
       padding: 2em 1em;
       text-align: center;
-      background-image: url(coffee-beans.jpg);
+      background-image: url(coffee-beans-small.jpg); /*Uses the smallest image on mobile devices*/
       background-size: 100%;
       color: #fff;
       text-shadow: 0.1em 0.1em 0.3em #000;
     }
 
+    @media (min-width: 35em) {
+      .hero {
+        padding: 5em 3em;
+        font-size: 1.2rem;
+        background-image: url(coffee-beans-medium.jpg); /*Uses a larger image on medium-size screens*/
+      }
+    }
+
+    @media (min-width: 50em) {
+      .hero {
+        padding: 7em 6em;
+        background-image: url(coffee-beans.jpg); /*Uses the full resolution image on large screens*/
+      }
+    }
+
     /*
      * Main section
      */
-     main {
-       padding: 1em;
-     }
+    main {
+      padding: 1em;
+    }
+
+    @media (min-width: 35em) {
+      main {
+        padding: 2em 1em;
+      }
+    }
+
+    @media (min-width: 50em) {
+      main {
+        padding: 2em 4em;
+      }
+    }
 
     .subtitle {
       margin-top: 1.5em;
@@ -134,6 +180,23 @@
       display: block;
     }
 
+    @media (min-width: 35em) {
+      .menu-toggle {
+        display: none;
+      }
+
+      .menu-dropdown {
+        display: block;
+      }
+    }
+
+    .menu.is-open .menu-dropdown {
+      display: block;
+    }
+
+    /**
+     * Nav menu
+     */
     .nav-menu {
       margin: 0;
       padding-left: 0;
@@ -152,6 +215,50 @@
       padding: 0.8em 1em;
       color: #fff;
       font-weight: normal;
+    }
+
+    @media (min-width: 35em) {
+      .nav-menu {
+        display: flex;
+        position: static;
+        border: 0;
+        padding: 0 1em;
+      }
+
+      .nav-menu > li {
+        flex: 1;
+      }
+      .nav-menu > li + li {
+        border: 0;
+      }
+
+      .nav-menu > li > a {
+        padding: 0.3em;
+        text-align: center;
+      }
+    }
+
+    @media (min-width: 50em) {
+      .nav-menu {
+        padding: 0 4em;
+      }
+    }
+
+    /**
+     * Main columns
+     */
+    @media (min-width: 35em) {
+     .row {
+       display: flex;
+       margin-left: -.75em;
+       margin-right: -.75em;
+      }
+
+      .column {
+        flex: 1;
+        margin-right: 0.75em;
+        margin-left: 0.75em;
+      }
     }
 
   </style>

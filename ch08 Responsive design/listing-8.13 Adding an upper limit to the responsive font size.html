@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wombat Coffee Roasters</title>
   <style>
+    /*Adding an upper limit to the responsive font size, page 225*/
     :root {
       box-sizing: border-box;
-      font-size: calc(1vw + 0.6em);
+      font-size: calc(1vw + 0.6em);      
+    }
+
+    @media (min-width: 50em) {
+      :root {
+        font-size: 1.125em; /*Applies a non-scaling font size above the highest breakpoint*/
+      }
     }
 
     *,
@@ -53,6 +60,12 @@
       }
     }
 
+    @media (min-width: 50em) {
+      .page-header {
+        padding: 1em 4em;
+      }
+    }
+
     .title > h1 {
       color: #333;
       text-transform: uppercase;
@@ -91,16 +104,28 @@
       }
     }
 
+    @media (min-width: 50em) {
+      .hero {
+        padding: 7em 6em;
+      }
+    }
+
     /*
      * Main section
      */
-     main {
-       padding: 1em;
-     }
+    main {
+      padding: 1em;
+    }
 
     @media (min-width: 35em) {
       main {
         padding: 2em 1em;
+      }
+    }
+
+    @media (min-width: 50em) {
+      main {
+        padding: 2em 4em;
       }
     }
 
@@ -160,7 +185,6 @@
 
       .menu-dropdown {
         display: block;
-        position: static;
       }
     }
 
@@ -194,6 +218,7 @@
     @media (min-width: 35em) {
       .nav-menu {
         display: flex;
+        position: static;
         border: 0;
         padding: 0 1em;
       }
@@ -208,6 +233,29 @@
       .nav-menu > li > a {
         padding: 0.3em;
         text-align: center;
+      }
+    }
+
+    @media (min-width: 50em) {
+      .nav-menu {
+        padding: 0 4em;
+      }
+    }
+
+    /**
+     * Main columns
+     */
+    @media (min-width: 35em) {
+     .row {
+       display: flex;
+       margin-left: -.75em;
+       margin-right: -.75em;
+      }
+
+      .column {
+        flex: 1;
+        margin-right: 0.75em;
+        margin-left: 0.75em;
       }
     }
 

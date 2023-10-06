@@ -5,15 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wombat Coffee Roasters</title>
   <style>
+    /*Increasing paddings for large breakpoints, page 225*/
     :root {
       box-sizing: border-box;
       font-size: calc(1vw + 0.6em);
-    }
-
-    @media (min-width: 50em) {
-      :root {
-        font-size: 1.125em;
-      }
     }
 
     *,
@@ -90,7 +85,7 @@
     .hero {
       padding: 2em 1em;
       text-align: center;
-      background-image: url(coffee-beans-small.jpg);
+      background-image: url(coffee-beans.jpg);
       background-size: 100%;
       color: #fff;
       text-shadow: 0.1em 0.1em 0.3em #000;
@@ -100,14 +95,12 @@
       .hero {
         padding: 5em 3em;
         font-size: 1.2rem;
-        background-image: url(coffee-beans-medium.jpg);
       }
     }
 
     @media (min-width: 50em) {
       .hero {
-        padding: 7em 6em;
-        background-image: url(coffee-beans.jpg);
+        padding: 7em 6em; /*Increases hero padding on all sides for a larger hero image*/
       }
     }
 
@@ -126,7 +119,8 @@
 
     @media (min-width: 50em) {
       main {
-        padding: 2em 4em;
+        /*Increases left and right padding on edges of page to 4 em*/
+        padding: 2em 4em; 
       }
     }
 

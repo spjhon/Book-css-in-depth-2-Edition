@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Modular CSS</title>
+  <link rel="stylesheet" href="./normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    /*Button module and modifiers, page 238*/
     :root {
       box-sizing: border-box;
     }
@@ -44,7 +47,7 @@
       background-color:  #e8c9cf;
     }
 
-    .button {
+    .button { /*Basic button styles*/
       padding: 0.5em 0.8em;
       border: 1px solid #265559;
       border-radius: 0.2em;
@@ -52,30 +55,30 @@
       font-size: 1rem;
     }
 
-    .button--success {
+    .button--success { /*Green success color variant*/
       border-color: #cfe8c9;
       color: #fff;
       background-color: #2f5926;
     }
 
-    .button--danger {
+    .button--danger { /*Red danger color variant*/
       border-color: #e8c9c9;
       color: #fff;
       background-color: #a92323;
     }
 
-    .button--small {
+    .button--small { /*Small variant*/
       font-size: 0.8rem;
     }
 
     .button--large {
-      font-size: 1.2rem;
+      font-size: 1.2rem; /*Large variant*/
     }
   </style>
 </head>
 
 <body>
-  <button class="button button--large">Read more</button>
-  <button class="button button--success">Save</button>
-  <button class="button button--danger button--small">Cancel</button>
+  <button class="button button--large">Read more</button> <!--Button module with large modifier-->
+  <button class="button button--success">Save</button> <!--Button module with success modifier-->
+  <button class="button button--danger button--small">Cancel</button> <!--Button module with danger and small modifier-->
 </body>

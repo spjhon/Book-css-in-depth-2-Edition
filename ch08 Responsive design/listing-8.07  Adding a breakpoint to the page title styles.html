@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wombat Coffee Roasters</title>
   <style>
+    /* Adding a breakpoint to the page title styles*/
     :root {
       box-sizing: border-box;
       font-size: calc(1vw + 0.6em);
@@ -47,18 +48,6 @@
       background-color: #fff;
     }
 
-    @media (min-width: 35em) {
-      .page-header {
-        padding: 1em;
-      }
-    }
-
-    @media (min-width: 50em) {
-      .page-header {
-        padding: 1em 4em;
-      }
-    }
-
     .title > h1 {
       color: #333;
       text-transform: uppercase;
@@ -66,11 +55,22 @@
       margin: .2em 0;
     }
 
-    @media (min-width: 35em) {
+    @media (min-width: 35em) { /*Targets breakpoints above 35 em*/
+      /*I used px in the example, but it’s a better idea to use ems in your media queries, based
+on the browser’s default font size (usually 16 px). Instead of 560 px, you should use 35
+em (560 / 16).*/
       .title > h1 {
-        font-size: 2.25rem;
+        font-size: 2.25rem; /*Overrides the mobile font size (1.5 rem) with a larger one*/
       }
     }
+
+    /* This is recommended
+    In short, the best way to target a high resolution (retina) display is to
+combine the two:
+    @media (-webkit-min-device-pixel-ratio: 2),
+ (min-resolution: 192dpi) { … }
+ visit PAGE 216
+ */
 
     .slogan {
       color: #888;
@@ -90,37 +90,12 @@
       text-shadow: 0.1em 0.1em 0.3em #000;
     }
 
-    @media (min-width: 35em) {
-      .hero {
-        padding: 5em 3em;
-        font-size: 1.2rem;
-      }
-    }
-
-    @media (min-width: 50em) {
-      .hero {
-        padding: 7em 6em;
-      }
-    }
-
     /*
      * Main section
      */
-    main {
-      padding: 1em;
-    }
-
-    @media (min-width: 35em) {
-      main {
-        padding: 2em 1em;
-      }
-    }
-
-    @media (min-width: 50em) {
-      main {
-        padding: 2em 4em;
-      }
-    }
+     main {
+       padding: 1em;
+     }
 
     .subtitle {
       margin-top: 1.5em;
@@ -171,23 +146,6 @@
       display: block;
     }
 
-    @media (min-width: 35em) {
-      .menu-toggle {
-        display: none;
-      }
-
-      .menu-dropdown {
-        display: block;
-      }
-    }
-
-    .menu.is-open .menu-dropdown {
-      display: block;
-    }
-
-    /**
-     * Nav menu
-     */
     .nav-menu {
       margin: 0;
       padding-left: 0;
@@ -206,50 +164,6 @@
       padding: 0.8em 1em;
       color: #fff;
       font-weight: normal;
-    }
-
-    @media (min-width: 35em) {
-      .nav-menu {
-        display: flex;
-        position: static;
-        border: 0;
-        padding: 0 1em;
-      }
-
-      .nav-menu > li {
-        flex: 1;
-      }
-      .nav-menu > li + li {
-        border: 0;
-      }
-
-      .nav-menu > li > a {
-        padding: 0.3em;
-        text-align: center;
-      }
-    }
-
-    @media (min-width: 50em) {
-      .nav-menu {
-        padding: 0 4em;
-      }
-    }
-
-    /**
-     * Main columns
-     */
-    @media (min-width: 35em) {
-     .row {
-       display: flex;
-       margin-left: -.75em;
-       margin-right: -.75em;
-      }
-
-      .column {
-        flex: 1;
-        margin-right: 0.75em;
-        margin-left: 0.75em;
-      }
     }
 
   </style>

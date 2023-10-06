@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Responsive table example</title>
   <style>
+    /* Forcing a responsive table layout on a mobile device, page */
     table {
       border-collapse: collapse;
     }
@@ -21,17 +22,17 @@
 
     @media (max-width: 30em) {
       table, thead, tbody, tr, th, td {
-        display: block;
+        display: block; /*Makes all table elements block display*/
       }
 
       thead tr {
-        position: absolute;
+        position: absolute; /*Hides the headings row by moving it off the screen*/
         top: -9999px;
         left: -9999px;
       }
 
       tr {
-        margin-bottom: 1em;
+        margin-bottom: 1em; /*Adds a little space between each set of table data*/
       }
     }
   </style>

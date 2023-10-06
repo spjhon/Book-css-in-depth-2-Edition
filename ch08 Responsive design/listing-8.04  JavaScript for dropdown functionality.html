@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wombat Coffee Roasters</title>
   <style>
+    /* JavaScript for dropdown functionality*/
     :root {
       box-sizing: border-box;
       font-size: calc(1vw + 0.6em);
@@ -47,23 +48,11 @@
       background-color: #fff;
     }
 
-    @media (min-width: 35em) {
-      .page-header {
-        padding: 1em;
-      }
-    }
-
     .title > h1 {
       color: #333;
       text-transform: uppercase;
       font-size: 1.5rem;
       margin: .2em 0;
-    }
-
-    @media (min-width: 35em) {
-      .title > h1 {
-        font-size: 2.25rem;
-      }
     }
 
     .slogan {
@@ -84,25 +73,12 @@
       text-shadow: 0.1em 0.1em 0.3em #000;
     }
 
-    @media (min-width: 35em) {
-      .hero {
-        padding: 5em 3em;
-        font-size: 1.2rem;
-      }
-    }
-
     /*
      * Main section
      */
-    main {
-      padding: 1em;
-    }
-
-    @media (min-width: 35em) {
-      main {
-        padding: 2em 1em;
-      }
-    }
+     main {
+       padding: 1em;
+     }
 
     .subtitle {
       margin-top: 1.5em;
@@ -147,85 +123,11 @@
       right: 0;
       left: 0;
       margin: 0;
+      background-color: #333;
     }
 
     .menu.is-open .menu-dropdown {
       display: block;
-    }
-
-    @media (min-width: 35em) {
-      .menu-toggle {
-        display: none;
-      }
-
-      .menu-dropdown {
-        display: block;
-      }
-    }
-
-    .menu.is-open .menu-dropdown {
-      display: block;
-    }
-
-    /**
-     * Nav menu
-     */
-    .nav-menu {
-      margin: 0;
-      padding-left: 0;
-      border: 1px solid #ccc;
-      list-style: none;
-      background-color: #000;
-      color: #fff;
-    }
-
-    .nav-menu > li + li {
-      border-top: 1px solid #ccc;
-    }
-
-    .nav-menu > li > a {
-      display: block;
-      padding: 0.8em 1em;
-      color: #fff;
-      font-weight: normal;
-    }
-
-    @media (min-width: 35em) {
-      .nav-menu {
-        display: flex;
-        position: static;
-        border: 0;
-        padding: 0 1em;
-      }
-
-      .nav-menu > li {
-        flex: 1;
-      }
-      .nav-menu > li + li {
-        border: 0;
-      }
-
-      .nav-menu > li > a {
-        padding: 0.3em;
-        text-align: center;
-      }
-    }
-
-    /**
-     * Main columns
-     */
-    @media (min-width: 35em) {
-     .row {
-       display: flex;
-       margin-left: -.75em;
-       margin-right: -.75em;
-      }
-
-      .column {
-        flex: 1;
-        margin-right: 0.75em;
-        margin-left: 0.75em;
-      }
     }
 
   </style>
@@ -290,11 +192,11 @@
 
   <script type="text/javascript">
   (function() {
-  var menuButton = document.getElementById('toggle-menu');
-  menuButton.addEventListener('click', function(event) {
+  let button = document.getElementById('toggle-menu');
+  button.addEventListener('click', function(event) { /*Click-event listener (also fires on a touchscreen tap event)*/
     event.preventDefault();
-    var menu = document.getElementById('main-menu');
-    menu.classList.toggle('is-open');
+    let menu = document.getElementById('main-menu');
+    menu.classList.toggle('is-open'); /*Toggles is-open class on the menu*/
   });
 })();
 </script>

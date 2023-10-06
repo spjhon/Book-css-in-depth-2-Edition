@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Modular CSS</title>
+  <link rel="stylesheet" href="./normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    
     :root {
       box-sizing: border-box;
     }
@@ -18,18 +21,19 @@
       font-family: Helvetica, Arial, sans-serif;
     }
 
-    .media {
+    .media { /*Main container*/
       padding: 1.5em;
       background-color: #eee;
       border-radius: 0.5em;
     }
-    .media::after {
+
+    .media::after { /*Clearfix*/
       content: "";
       display: block;
       clear: both;
     }
 
-    .media__image {
+    .media__image { /*The image and body sub-elements*/
       float: left;
       margin-right: 1.5em;
     }
@@ -39,7 +43,7 @@
       margin-top: 0;
     }
 
-    .media__body > h4 {
+    .media__body > h4 { /*The title within the body*/
       margin-top: 0;
     }
   </style>
@@ -47,9 +51,9 @@
 
 <body>
   <div class="media">
-    <img class="media__image" src="runner.png">
-    <div class="media__body">
-      <h4>Strength</h4>
+    <img class="media__image" src="runner.png" alt="Silueta Hombre Corriendo"> <!--Image sub-element-->
+    <div class="media__body"> <!--Body sub-element-->
+      <h4>Strength</h4> <!--Title sub-element-->
       <p>
         Strength training is an important part of
         injury prevention. Focus on your core&mdash;

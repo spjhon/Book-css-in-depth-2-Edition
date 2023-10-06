@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Modular CSS</title>
+  <link rel="stylesheet" href="./normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    /* Defining a right variant for the Media module, page 243*/
+
+    /*When you start a module, ask yourself, “At a
+high level, what’s the module’s responsibility?”*/
+
+/*I’ve a rule of thumb: “If I have to use the word and in describing the
+module’s responsibility, then I might be describing multiple responsibilities.”*/
     :root {
       box-sizing: border-box;
     }
@@ -43,7 +52,7 @@
       margin-top: 0;
     }
 
-    .media--right > .media__image {
+    .media--right > .media__image { /*Targets image sub-element, but only when right modifier is present*/
       float: right;
     }
   </style>
@@ -51,7 +60,7 @@
 
 <body>
   <div class="media media--right">
-    <img class="media__image" src="runner.png">
+    <img class="media__image" src="runner.png" alt="hombre corriendo">
     <div class="media__body">
       <h4>Strength</h4>
       <p>
