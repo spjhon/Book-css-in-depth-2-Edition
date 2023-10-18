@@ -1,0 +1,16 @@
+<!doctype>
+<head>
+  <style type="text/css">
+.blend {
+  min-height: 400px; 
+  background-image: url("images/scratches.png"), url("images/bear.jpg"); /*Layers the texture in frontof the primary image*/
+  background-size: 200px, cover; /*Tiles the texture image every 200 px*/
+  background-repeat: repeat, no-repeat;
+  background-position: center center;
+  background-blend-mode: soft-light; /*Blends with soft-light*/
+}
+  </style>
+</head>
+<body>
+  <div class="blend"></div>
+</body>

@@ -1,0 +1,26 @@
+<!doctype>
+<head>
+  <style type="text/css">
+.button {
+  padding: 0.8em;
+  border: 0;
+  font-size: 1rem;
+  color: white;
+  border-radius: 0.5em; /*Adds back the rounded corners*/
+  background-color: #57b;
+  box-shadow: 0 0.4em #148; /*Puts a solid shadow beneath the button (no blur)*/
+  text-shadow: 1px 1px #148; /*Adds a subtle text shadow*/
+}
+.button:active {
+  background-color: #456ab5;
+  transform: translateY(0.1em); /*Shifts the button down when clicked*/
+  box-shadow: 0 0.3em #148; /*Reduces the size of the shadow to offset the transform*/
+}
+.button:focus {
+  outline: none;
+}
+  </style>
+</head>
+<body>
+  <button class="button">Sign up now</button>
+</body>

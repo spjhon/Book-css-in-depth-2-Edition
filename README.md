@@ -173,3 +173,38 @@ This chapter covers
 - Applying a CSS First approach to writing styles
 - Safely editing and deleting CSS
 - Utilizing CSS frameworks such as Bootstrap
+
+Summary
+
+- Use a tool such as KSS to document and inventory your modules.
+- Use a pattern library to document markup examples, module variants, and JavaScript for your modules.
+- Develop your modules “CSS First.”
+- Consider the API your CSS defines, taking care to never break it unpredictably.
+- Version your CSS using semver.
+- Don’t blindly add a CSS framework to your page; selectively take only the pieces you need.
+
+Chapter 11: Backgrounds, shadows, and blend modes
+
+This chapter covers
+
+- Linear and radial gradients
+- Box shadows and text shadows
+- Sizing and positioning background images
+- Using blend modes to combine backgrounds and content
+
+Summary
+- Use gradients and shadows to add the appearance of depth to the page.
+- Even basic flat designs can benefit from some subtle shadows or gradients.
+- Use gradients with explicit color stops to add stripes to an element.
+- A subtle background gradient rather than a flat color provides a little more complexity to the design.
+- Use blend modes to colorize or texture an image.
+
+Chapter 12: Contrast, color, and spacing
+
+This chapter covers
+- Converting a designer mockup into HTML and CSS
+- Using contrast to draw attention to the right parts of a page
+- Selecting colors
+- Leveraging white space
+- Working with line height
+
