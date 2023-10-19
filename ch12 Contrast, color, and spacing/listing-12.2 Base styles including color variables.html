@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /*Assigns each color to a variable*/
 html {
   --brand-green: #076448;
   --dark-green: #099268;
@@ -24,15 +25,15 @@ body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.4;
-  background-color: var(--extra-light-gray);
+  background-color: var(--extra-light-gray); /*Uses variables to assign color where needed*/
 }
 
 h1, h2, h3, h4 {
-  font-family: Georgia, serif;
+  font-family: Georgia, serif; /*Sets heading fonts*/
 }
 
 a {
-  color: var(--medium-green);
+  color: var(--medium-green); /*Uses variables to assign color where needed*/
 }
 a:visited {
   color: var(--brand-green);
@@ -40,12 +41,12 @@ a:visited {
 a:hover {
   color: var(--brand-green);
 }
-a:active {
+a:active { /*Placeholder for active links. You’ll need a red color for this later on.*/
 }
   </style>
 </head>
 <body>
-  <nav class="nav-container">
+  <nav class="nav-container"> <!--Top navbar container-->
     <ul class="top-nav">
       <li class="top-nav__home"><a href="/">Ink</a></li>
       <li><a href="/features">Features</a></li>
@@ -54,7 +55,7 @@ a:active {
       <li class="top-nav__featured"><a href="/login">Login</a></li>
     </ul>
   </nav>
-  <div class="hero">
+  <div class="hero"> <!--Large hero image-->
     <div class="hero__inner">
       <h2>Team collaboration done right</h2>
       <a href="/sign-up" class="button button--cta">Get started</a>
@@ -62,7 +63,7 @@ a:active {
   </div>
 
   <div class="container">
-    <div class="tile-row">
+    <div class="tile-row"> <!--Three-column tile row-->
       <div class="tile">
         <h4>Work together, even if you're apart</h4>
         <p>Organize your team conversations into threads. Collaborate together on documents in real-time. Use face-to-face <a href="/features/video-calling">video calls</a> when typing just won't do.</p>

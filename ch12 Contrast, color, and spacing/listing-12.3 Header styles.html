@@ -46,7 +46,7 @@ a:active {
 .nav-container {
   background-color: var(--medium-green);
 }
-.nav-container__inner {
+.nav-container__inner { /*Centers the contents and restricts their width to 1,080 px*/
   display: flex;
   justify-content: space-between;
   max-width: 1080px;
@@ -60,12 +60,12 @@ a:active {
   font-weight: bold;
   text-decoration: none;
 }
-
-.top-nav {
+ 
+.top-nav { /*Uses flexbox to display nav items in a row*/
   display: flex;
   list-style-type: none;
 }
-.top-nav a {
+.top-nav a { /*Adds color and padding to each nav item link*/
   display: block;
   padding: 0.3em 1.25em;
   color: var(--white);
@@ -84,42 +84,6 @@ a:active {
   color: var(--medium-green);
   background-color: var(--white);
 }
-
-.hero {
-  background: url(collaboration.jpg) no-repeat;
-  background-size: cover;
-  margin-bottom: 2.5rem;
-}
-.hero__inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 50px 0 200px;
-  text-align: right;
-}
-.hero h2 {
-  font-size: 1.95rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.4em 1em;
-  color: var(--brand-green);
-  border: 2px solid var(--brand-green);
-  border-radius: 0.2em;
-  text-decoration: none;
-  font-size: 1rem;
-}
-.button:hover {
-  background-color: var(--dark-green);
-  color: var(--white);
-}
-.button--cta {
-  padding: 0.6em 1em;
-  background-color: var(--brand-green);
-  color: var(--white);
-  border: none;
-}
-
   </style>
 </head>
 <body>
