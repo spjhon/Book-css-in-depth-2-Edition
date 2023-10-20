@@ -207,4 +207,3 @@ This chapter covers
 - Selecting colors
 - Leveraging white space
 - Working with line height
-
