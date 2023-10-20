@@ -1,5 +1,9 @@
 <!doctype html>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playpen+Sans:wght@200&display=swap" rel="stylesheet">
+
   <style>
 html {
   --brand-green: hsl(162, 87%, 21%);
@@ -10,6 +14,7 @@ html {
   --light-gray: hsl(210, 17%, 95%);
   --extra-light-gray: hsl(210, 17%, 98%);
   --white: hsl(0, 0%, 100%);
+  --red: hsl(342, 63%, 46%);
 
   box-sizing: border-box;
   color: var(--text-color);
@@ -22,13 +27,13 @@ html {
 
 body {
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Playpen Sans", sans-serif;
   line-height: 1.4;
   background-color: var(--extra-light-gray);
 }
 
 h1, h2, h3, h4 {
-  font-family: Georgia, serif;
+  font-family: "Dancing Script", serif;
 }
 
 a {
@@ -41,6 +46,12 @@ a:hover {
   color: var(--brand-green);
 }
 a:active {
+  color: var(--red);
+}
+
+p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .nav-container {
@@ -51,12 +62,13 @@ a:active {
   justify-content: space-between;
   max-width: 1080px;
   margin: 0 auto;
+  padding: 0.625em 0;
 }
 
 .home-link {
   color: var(--text-color);
   font-size: 1.6rem;
-  font-family: Georgia, serif;
+  font-family: Sansita, serif;
   font-weight: bold;
   text-decoration: none;
 }
@@ -64,6 +76,10 @@ a:active {
 .top-nav {
   display: flex;
   list-style-type: none;
+  margin: 0;
+}
+.top-nav > li + li {
+  margin-left: 0.625em;
 }
 .top-nav a {
   display: block;
@@ -93,11 +109,13 @@ a:active {
 .hero__inner {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 50px 0 200px;
+  padding: 5.56em 12.5em 12.5em 0;
   text-align: right;
 }
 .hero h2 {
   font-size: 1.95rem;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
 }
 
 .button {
@@ -132,10 +150,31 @@ a:active {
 .tile-row > * {
   flex: 1;
 }
+.tile-row > * + * {
+  margin-left: 1.5625em;
+}
 
 .tile {
   background-color: var(--white);
   border-radius: 0.3em;
+  padding: 1.5625em;
+}
+.tile > h4 {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+.tag-list {
+  list-style: none;
+  padding-left: 0;
+}
+.tag-list > li {
+  display: inline;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  background-color: var(--light-gray);
+  line-height: 2.6;
 }
 
 .page-footer {

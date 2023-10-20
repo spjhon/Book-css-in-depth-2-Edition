@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /*Positioning the slogan and button within the hero image*/
 html {
   --brand-green: hsl(162, 87%, 21%);
   --dark-green: hsl(162, 88%, 30%);
@@ -43,6 +44,11 @@ a:hover {
 }
 a:active {
   color: var(--red);
+}
+
+p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .nav-container {
@@ -97,14 +103,16 @@ a:active {
   background-size: cover;
   margin-bottom: 2.5rem;
 }
-.hero__inner {
+.hero__inner { /*Replaces the rough estimate with the newly calculated spacing*/
   max-width: 1080px;
   margin: 0 auto;
-  padding: 50px 0 200px;
+  padding: 5.56em 12.5em 12.5em 0;
   text-align: right;
 }
 .hero h2 {
-  font-size: 1.95rem;
+  font-size: 1.95rem; /*Removes the top margin as the hero__inner padding provides all the space needed*/
+  margin-top: 0;
+  margin-bottom: 0.625rem; /*Defines the space between the slogan and the button*/
 }
 
 .button {
@@ -146,6 +154,11 @@ a:active {
 .tile {
   background-color: var(--white);
   border-radius: 0.3em;
+  padding: 1.5625em;
+}
+.tile > h4 {
+  margin-top: 0;
+  margin-bottom: 1.5em;
 }
 
 .page-footer {
