@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Sansita:800" rel="stylesheet">
   <style>
+    /*Styling the tags*/
 html {
   --brand-green: hsl(162, 87%, 21%);
   --dark-green: hsl(162, 88%, 30%);
@@ -24,13 +24,13 @@ html {
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.4;
   background-color: var(--extra-light-gray);
 }
 
 h1, h2, h3, h4 {
-  font-family: Sansita, serif;
+  font-family: Georgia, serif;
 }
 
 a {
@@ -65,7 +65,7 @@ p {
 .home-link {
   color: var(--text-color);
   font-size: 1.6rem;
-  font-family: Sansita, serif;
+  font-family: Georgia, serif;
   font-weight: bold;
   text-decoration: none;
 }
@@ -161,7 +161,7 @@ p {
   margin-bottom: 1.5em;
 }
 
-.tag-list {
+.tag-list { /*Overrides user agent list styles*/
   list-style: none;
   padding-left: 0;
 }
@@ -171,7 +171,7 @@ p {
   font-size: 0.8rem;
   border-radius: 0.2rem;
   background-color: var(--light-gray);
-  line-height: 2.6;
+  line-height: 2.6; /*Sets a large line height to add vertical space when line wrapping*/
 }
 
 .page-footer {

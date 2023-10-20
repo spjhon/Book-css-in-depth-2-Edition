@@ -193,6 +193,7 @@ This chapter covers
 - Using blend modes to combine backgrounds and content
 
 Summary
+
 - Use gradients and shadows to add the appearance of depth to the page.
 - Even basic flat designs can benefit from some subtle shadows or gradients.
 - Use gradients with explicit color stops to add stripes to an element.
@@ -202,8 +203,27 @@ Summary
 Chapter 12: Contrast, color, and spacing
 
 This chapter covers
+
 - Converting a designer mockup into HTML and CSS
 - Using contrast to draw attention to the right parts of a page
 - Selecting colors
 - Leveraging white space
 - Working with line height
+
+Summary
+
+- Use contrast selectively to draw attention to important parts of the page.
+- Use HSL color to make working with colors easier and more understandable at a glance.
+- Trust your designer when they get picky about nitty gritty details.
+- Take the time to fine-tune spacing.
+- Remember that line height can impact your vertical spacing.
+
+Chapter 13: Typograhpy
+
+This chapter covers
+
+- How web fonts can give your page a unique feel
+- Using the Google Fonts API
+- Tuning font spacing (tracking and leading)
+- Web font performance concerns and optimizations
+- Dealing with FOUT and FOIT

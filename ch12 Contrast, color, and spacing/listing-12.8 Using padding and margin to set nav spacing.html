@@ -45,11 +45,6 @@ a:active {
   color: var(--red);
 }
 
-p {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
-
 .nav-container {
   background-color: var(--medium-green);
 }
@@ -58,7 +53,7 @@ p {
   justify-content: space-between;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0.625em 0;
+  padding: 0.625em 0; /*Adds 10 px top and bottom padding to the whole navbar*/
 }
 
 .home-link {
@@ -72,11 +67,11 @@ p {
 .top-nav {
   display: flex;
   list-style-type: none;
-  margin: 0;
+  margin: 0; /*Removes the list margin applied from the user agent stylesheet*/
 }
 .top-nav > li + li {
-  margin-left: 0.625em;
-}
+  margin-left: 0.625em; /*Adds a 10 px horizontal margin between each nav item*/
+} 
 .top-nav a {
   display: block;
   padding: 0.3em 1.25em;
@@ -144,18 +139,10 @@ p {
 .tile-row > * {
   flex: 1;
 }
-.tile-row > * + * {
-  margin-left: 1.5625em;
-}
 
 .tile {
   background-color: var(--white);
   border-radius: 0.3em;
-  padding: 1.5625em;
-}
-.tile > h4 {
-  margin-top: 0;
-  margin-bottom: 1.5em;
 }
 
 .page-footer {

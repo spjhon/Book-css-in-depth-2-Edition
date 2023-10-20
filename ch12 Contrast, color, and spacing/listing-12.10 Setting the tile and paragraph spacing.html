@@ -45,6 +45,11 @@ a:active {
   color: var(--red);
 }
 
+p { /*Adds margins to paragraphs in your base styles*/
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
 .nav-container {
   background-color: var(--medium-green);
 }
@@ -139,10 +144,19 @@ a:active {
 .tile-row > * {
   flex: 1;
 }
+.tile-row > * + * {
+  margin-left: 1.5625em;
+}
 
-.tile {
+.tile { /*Adds padding inside the tiles*/
   background-color: var(--white);
   border-radius: 0.3em;
+  padding: 1.5625em;
+}
+
+.tile > h4 { /*Adds the margin beneath the tile headings*/
+  margin-top: 0;
+  margin-bottom: 1.5em;
 }
 
 .page-footer {
@@ -157,6 +171,8 @@ a:active {
   text-align: center;
   font-size: 0.8rem;
 }
+
+
   </style>
 </head>
 <body>

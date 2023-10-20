@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
   <style>
+    /*Adding margins below the hero image and between the columns*/
 html {
   --brand-green: hsl(162, 87%, 21%);
   --dark-green: hsl(162, 88%, 30%);
@@ -43,11 +44,6 @@ a:hover {
 }
 a:active {
   color: var(--red);
-}
-
-p {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
 }
 
 .nav-container {
@@ -97,21 +93,22 @@ p {
   background-color: var(--white);
 }
 
+
+
+
 .hero {
   background: url(collaboration.jpg) no-repeat;
   background-size: cover;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem; /*Ensures 40 px space beneath the hero image*/
 }
 .hero__inner {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 5.56em 12.5em 12.5em 0;
+  padding: 50px 0 200px;
   text-align: right;
 }
 .hero h2 {
   font-size: 1.95rem;
-  margin-top: 0;
-  margin-bottom: 0.625rem;
 }
 
 .button {
@@ -135,6 +132,9 @@ p {
 }
 
 
+
+
+
 .container {
   margin: 0 auto;
   max-width: 1080px;
@@ -147,17 +147,12 @@ p {
   flex: 1;
 }
 .tile-row > * + * {
-  margin-left: 1.5625em;
+  margin-left: 1.5625em; /*Adds 25 px between each column*/
 }
 
 .tile {
   background-color: var(--white);
   border-radius: 0.3em;
-  padding: 1.5625em;
-}
-.tile > h4 {
-  margin-top: 0;
-  margin-bottom: 1.5em;
 }
 
 .page-footer {
