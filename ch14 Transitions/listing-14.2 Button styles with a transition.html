@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transitions</title>
+  <style>
+button {
+  background-color: hsl(180, 50%, 50%); /*Teal button*/
+  border: 0;
+  color: white;
+  font-size: 1rem;
+  padding: .3em 1em;
+  transition-property: all; /*Transitions all property changes*/
+  transition-duration: 0.5s; /*Transitions for 0.5 seconds*/
+}
+button:hover {
+  background-color: hsl(0, 50%, 50%); /*Hover state red button with border radius*/
+  border-radius: 1em;
+  padding: 3em;
+}
+  </style>
+</head>
+<body>
+  <button>Hover over me</button>
+</body>
+</html>

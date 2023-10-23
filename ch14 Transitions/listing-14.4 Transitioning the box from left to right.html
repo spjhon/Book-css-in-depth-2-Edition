@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .container {
+        position: relative;
+        height: 30px;
+      }
+      .box {
+        position: absolute;
+        left: 0; /*Starts positioned to the left*/
+        height: 30px;
+        width: 30px;
+        background-color: hsl(130, 50%, 50%);
+        transition: all 1s linear; /*Applies a transition*/
+      }
+      .container:hover .box {
+        left: 400px; /*Moves 400 px to the right on hover*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <!--You’ll transition this box across the screen from left to right.-->
+    </div>
+  </body>
+</html>

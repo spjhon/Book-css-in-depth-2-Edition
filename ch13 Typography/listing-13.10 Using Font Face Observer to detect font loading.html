@@ -1,7 +1,11 @@
 <!doctype html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fonts</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300|Sansita:800" rel="stylesheet">
   <style>
+    /*Using Font Face Observer to detect font loading*/
 html {
   --brand-green: hsl(162, 87%, 21%);
   --dark-green: hsl(162, 88%, 30%);
@@ -24,24 +28,15 @@ html {
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.4;
   letter-spacing: 0.01em;
   background-color: var(--extra-light-gray);
 }
-.fonts-failed body {
-  font-family: Helvetica, Arial, sans-serif;
-}
 
 h1, h2, h3, h4 {
-  font-family: Sansita, serif;
+  font-family: "Sansita", serif;
   letter-spacing: 0.03em;
-}
-.fonts-failed h1,
-.fonts-failed h2,
-.fonts-failed h3,
-.fonts-failed h4 {
-  font-family: Georgia, serif;
 }
 
 a {
@@ -77,13 +72,10 @@ p {
 .home-link {
   color: var(--text-color);
   font-size: 1.6rem;
-  font-family: Sansita, serif;
+  font-family: "Sansita", serif;
   font-weight: bold;
   letter-spacing: 0.03em;
   text-decoration: none;
-}
-.fonts-failed .home-link {
-  font-family: Georgia, serif;
 }
 
 .top-nav {
@@ -262,23 +254,23 @@ p {
   </footer>
 
   <script type="text/javascript">
-    var html = document.documentElement;
-    var script = document.createElement("script");
+    let html = document.documentElement;
+    let script = document.createElement("script"); /*Dynamically creates a <script> tag to add the Font Face Observer to the page*/
     script.src = "fontfaceobserver.js";
     script.async = true;
 
     script.onload = function () {
-      var roboto = new FontFaceObserver("Roboto");
-      var sansita = new FontFaceObserver("Sansita");
-      var timeout = 2000;
+      let roboto = new FontFaceObserver("Roboto");
+      let sansita = new FontFaceObserver("Sansita"); /*Creates observers for both Roboto and Sansita fonts*/
+      let timeout = 2000;
 
       Promise.all([
         roboto.load(null, timeout),
         sansita.load(null, timeout)
       ]).then(function () {
-        html.classList.add("fonts-loaded");
+        html.classList.add("fonts-loaded"); /*When both fonts are loaded, adds the fonts-loaded class to the <html> element*/
       }).catch(function (e) {
-        html.classList.add("fonts-failed");
+        html.classList.add("fonts-failed"); /*When font loading fails, adds the fonts-failed class to the <html> element*/
       });
     };
     document.head.appendChild(script);
