@@ -1,7 +1,14 @@
 <!doctype html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Sansita:800" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fonts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playpen+Sans:wght@200&display=swap" rel="stylesheet">
+
   <style>
+    /*Using the web fonts*/
 html {
   --brand-green: hsl(162, 87%, 21%);
   --dark-green: hsl(162, 88%, 30%);
@@ -24,15 +31,13 @@ html {
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: "Playpen Sans", sans-serif; /*Applies the font as come in the link tag globally to the page*/
   line-height: 1.4;
-  letter-spacing: 0.01em;
   background-color: var(--extra-light-gray);
 }
 
 h1, h2, h3, h4 {
-  font-family: Sansita, serif;
-  letter-spacing: 0.03em;
+  font-family: "Dancing Script", serif; /*Sets headings to the Dancing Script font*/
 }
 
 a {
@@ -67,9 +72,8 @@ p {
 .home-link {
   color: var(--text-color);
   font-size: 1.6rem;
-  font-family: Sansita, serif;
+  font-family: "Playpen Sans", serif; /*Sets the homepage link to Sansita*/
   font-weight: bold;
-  letter-spacing: 0.03em;
   text-decoration: none;
 }
 
@@ -114,7 +118,6 @@ p {
 }
 .hero h2 {
   font-size: 1.95rem;
-  letter-spacing: -0.02em;
   margin-top: 0;
   margin-bottom: 0.625rem;
 }
