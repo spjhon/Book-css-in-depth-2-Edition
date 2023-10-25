@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transitions</title>
     <style>
       .container {
         position: relative;
@@ -13,7 +15,7 @@
         height: 30px;
         width: 30px;
         background-color: hsl(130, 50%, 50%);
-        transition: all 1s linear; /*Applies a transition*/
+        transition: all 1s ease-in; /*Applies a transition*/
       }
       .container:hover .box {
         left: 400px; /*Moves 400 px to the right on hover*/

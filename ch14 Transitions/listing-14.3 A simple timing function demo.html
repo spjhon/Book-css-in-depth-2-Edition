@@ -1,38 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Transitions</title>
-  <style>
-    
-button {
-  background-color: hsl(180, 50%, 50%);
-  border: 0;
-  color: white;
-  font-size: 1rem;
-  padding: .3em 1em;
-  transition: border-radius 0.5s ease,
-              background-color 1s linear;
-}
-button:hover {
-  background-color: hsl(0, 50%, 50%);
-  border-radius: 1em;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transitions</title>
+    <style>
+      button {
+        background-color: hsl(180, 50%, 50%);
+        border: 0;
+        color: white;
+        font-size: 1rem;
+        padding: 0.3em 1em;
+        transition: border-radius 0.5s ease, background-color 1s linear;
+      }
+      button:hover {
+        background-color: hsl(0, 50%, 50%);
+        border-radius: 1em;
+      }
 
-
-.flex {
-  margin: 0 -1em;
-}
-.flex > * {
-  margin: 0 1em;
-}
-
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="box"></div> 
-   </div>
-</body>
+      .flex {
+        margin: 0 -1em;
+      }
+      .flex > * {
+        margin: 0 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
 </html>

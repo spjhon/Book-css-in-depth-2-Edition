@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @keyframes squareToCircle {
+      0% {
+        width: 100px;
+        height: 100px;
+        border-radius: 0;
+      }
+      100% {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+    }
+
+    #myShape {
+      animation: squareToCircle 2s linear forwards;
+      width: 100px;
+      height: 100px;
+      border-radius: 0;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="myShape"></div>
+</body>
+</html>

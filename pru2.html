@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Modular CSS</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        #myPath {
+            transition: d 1s ease; /* Smooth transition for 1 second */
+        }
+
+        #myPath:hover {
+            d: path("M50,50 L150,50 L150,150 L50,150 L50,50"); /* Define the new path data on hover */
+            
+        }
+    </style>
+</head>
+<body>
+    <svg width="200" height="200">
+        <path id="myPath" d="M50,50 L100,50 L100,100 L50,100 Z" fill="blue" />
+    </svg>
+</body>
+</html>

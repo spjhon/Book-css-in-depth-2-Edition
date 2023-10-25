@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @keyframes starToCircle {
+      0% {
+        clip-path: polygon(50% 0%, 61.8% 38.2%, 100% 38.2%, 69.1% 61.8%, 80.3% 100%, 50% 76.4%, 19.7% 100%, 30.9% 61.8%, 0% 38.2%);
+        transform: scale(1);
+      }
+      25% {
+        clip-path: polygon(50% 0%, 61.8% 38.2%, 100% 38.2%, 69.1% 61.8%, 80.3% 100%, 50% 76.4%, 19.7% 100%, 30.9% 61.8%, 0% 38.2%);
+        transform: scale(0.85);
+      }
+      50% {
+        clip-path: polygon(50% 0%, 61.8% 38.2%, 100% 38.2%, 69.1% 61.8%, 80.3% 100%, 50% 76.4%, 19.7% 100%, 30.9% 61.8%, 0% 38.2%);
+        transform: scale(0.5);
+      }
+      75% {
+        clip-path: polygon(50% 0%, 61.8% 38.2%, 100% 38.2%, 69.1% 61.8%, 80.3% 100%, 50% 76.4%, 19.7% 100%, 30.9% 61.8%, 0% 38.2%);
+        transform: scale(0.15);
+      }
+      100% {
+        clip-path: circle(50% at 50% 50%);
+        transform: scale(0);
+      }
+    }
+
+    #myShape {
+      animation: starToCircle 2s linear forwards;
+      width: 100px;
+      height: 100px;
+      fill: blue;
+    }
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+    <circle id="myShape" cx="100" cy="100" r="50" fill="blue" />
+  </svg>
+</body>
+</html>
