@@ -244,3 +244,19 @@ This chapter covers
 - Bringing motion to the page with transitions
 - Understanding timing functions and choosing the right one
 - Coordinating with JavaScript
+
+Summary
+
+- You can use transitions to smooth sudden changes in the page.
+- To catch the user’s attention, use an accelerating motion.
+- To show the user that their action has taken effect, use a decelerating motion.
+- You can use JavaScript to coordinate transitions with class name changes when CSS alone cannot do what you need.
+
+Chapter 15: Transforms
+
+This chapter covers
+
+- Manipulating elements using transforms for performant transitions and animations
+- Adding a “bounce” effect to a transition
+- The browser’s rendering pipeline
+- Looking at 3D transforms and perspective

@@ -169,3 +169,18 @@ React and Web Components are built to solve different problems. Web Components p
 
 FOUT, or Flash of Unstyled Text.
 FOIT, for Flash of Invisible Text.
+
+
+## Animations
+
+Use quick transition speeds for hover effects, fades, and small scaling
+effects. Keep these below 300 ms; you may even want to go as low as 100 ms in
+some instances. For transitions that involve large moves or complex timing
+functions, such as bounces (see chapter 15), use slightly longer transitions
+between 300 and 500 ms.
+
+Most properties that accept a length, number, color, or the function
+calc() can be animated. Most properties that take a keyword or other discrete values, like url(), can’t.
+
+You can use the JavaScript transitionend event to perform an action
+after a transition completes.

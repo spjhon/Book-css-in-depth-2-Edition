@@ -1,7 +1,9 @@
-<!doctype>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transitions</title>
     <style>
 
     body {
@@ -23,12 +25,17 @@
     }
     .dropdown__drawer {
       position: absolute;
-      display: none;
       background-color: white;
       width: 10em;
+      opacity: 0;
+      visibility: hidden; /*Hidden and transparent when closed*/
+      transition: opacity 0.2s linear,
+                  visibility 0s linear 0.2s; /*Delays the visibility transition 0.2s*/
     }
     .dropdown.is-open .dropdown__drawer {
-      display: block;
+      opacity: 1; /*Visible and fully opaque when opened*/
+      visibility: visible;
+      transition-delay: 0s; /*Removes the transition delay while the is-open class is applied*/
     }
 
     .menu {

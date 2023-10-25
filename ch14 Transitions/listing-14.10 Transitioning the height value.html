@@ -1,8 +1,11 @@
-<!doctype>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transitions</title>
     <style>
+      /* Transitioning the height value*/
 
     body {
       font-family: Helvetica, Arial, sans-serif;
@@ -25,11 +28,12 @@
       position: absolute;
       background-color: white;
       width: 10em;
-      opacity: 0;
-      transition: all 0.2s linear;
+      height: 0;
+      overflow: hidden; /*Closed drawer has no height and overflow is hidden.*/
+      transition: height 0.3s ease-out; /*Transitions the height*/
     }
     .dropdown.is-open .dropdown__drawer {
-      opacity: 1;
+      height: auto; /*Height of the open drawer is determined by its contents.*/
     }
 
     .menu {
@@ -80,11 +84,19 @@
 
     <script type="text/javascript">
       (function () {
-        var toggle = document.getElementsByClassName('dropdown__toggle')[0];
-        var dropdown = toggle.parentElement;
+        let toggle = document.getElementsByClassName('dropdown__toggle')[0];
+        let dropdown = toggle.parentElement;
+        let drawer = document.getElementsByClassName('dropdown__drawer')[0];
+        let height = drawer.scrollHeight; /*Gets the computed auto height of the drawer*/
+
         toggle.addEventListener('click', function (e) {
           e.preventDefault();
           dropdown.classList.toggle('is-open');
+          if (dropdown.classList.contains('is-open')) {
+            drawer.style.setProperty('height', height + 'px'); /*Sets the height explicitly to open*/
+          } else {
+            drawer.style.setProperty('height', '0'); /*Restores the height to zero to close*/
+          }
         });
       }());
     </script>
