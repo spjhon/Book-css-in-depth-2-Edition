@@ -1,8 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transforms</title>
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Raleway" rel="stylesheet">
     <style type="text/css">
+      /*Mobile styles for the nav menu links*/
 
       html {
         box-sizing: border-box;
@@ -17,7 +21,7 @@
         background-color: hsl(200, 80%, 30%);
         background-image: radial-gradient(hsl(200, 80%, 30%), hsl(210, 80%, 20%));
         color: white;
-        font-family: Raleway, Helvetica, Arial, sans-serif;
+        font-family: "Raleway", Helvetica, Arial, sans-serif;
         line-height: 1.4;
         margin: 0;
         min-height: 100vh;
@@ -36,6 +40,7 @@
         max-width: 100%;
       }
 
+      /*Page Header*/
       .page-header {
         margin: 0;
         padding: 1rem;
@@ -47,8 +52,10 @@
         }
       }
 
+
+      /*Responsive Nav*/
       .nav-links {
-        display: flex;
+        display: flex; /*Uses a flexbox to spread the nav items across the screen horizontally*/
         margin-top: 0;
         margin-bottom: 1rem;
         padding: 0 1rem;
@@ -63,19 +70,20 @@
         padding: 0.8em 0;
         color: white;
         font-size: 0.8rem;
-        text-decoration: none;
+        text-decoration: none; /*Styles the link text*/
         text-transform: uppercase;
         letter-spacing: 0.06em;
       }
       .nav-links__icon {
         height: 1.5em;
         width: 1.5em;
-        vertical-align: -0.2em;
+        vertical-align: -0.2em; /*Moves icons down slightly to center them with the text labels*/
       }
       .nav-links > li > a:hover {
         color: hsl(40, 100%, 70%);
       }
 
+      /*End of styles*/
     </style>
   </head>
   <body>
