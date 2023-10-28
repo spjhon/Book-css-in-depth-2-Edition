@@ -1,8 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transforms</title>
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Raleway" rel="stylesheet">
     <style type="text/css">
+      /*Positioning the menu for large viewports*/
 
       html {
         box-sizing: border-box;
@@ -17,14 +21,14 @@
         background-color: hsl(200, 80%, 30%);
         background-image: radial-gradient(hsl(200, 80%, 30%), hsl(210, 80%, 20%));
         color: white;
-        font-family: Raleway, Helvetica, Arial, sans-serif;
+        font-family: "Raleway", Helvetica, Arial, sans-serif;
         line-height: 1.4;
         margin: 0;
         min-height: 100vh;
       }
 
       h1, h2, h3 {
-        font-family: Alfa Slab One, serif;
+        font-family: "Alfa Slab One", serif;
         font-weight: 400;
       }
 
@@ -41,27 +45,27 @@
         padding: 1rem;
       }
 
-      @media (min-width: 30em) {
+      @media (min-width: 30em) { 
         .page-header {
           padding: 2rem 2rem 3rem;
         }
       }
 
-      @media (min-width: 30em) {
+      @media (min-width: 30em) { /*Applies styles only to medium and larger screens*/
         .main-nav {
           position: fixed;
           left: 0;
           top: 8.25rem;
-          z-index: 10;
-          background-color: transparent;
-          transition: background-color .5s linear;
+          z-index: 10; /*Ensures the nav shows in front of other content added to the page later*/
+          background-color: transparent; /*Initially leaves the background color transparent*/
+          transition: background-color .5s linear; /*Adds a transition effect to the background*/
           border-top-right-radius: 0.5em;
           border-bottom-right-radius: 0.5em;
         }
 
         .main-nav:hover {
-          background-color: rgba(0, 0, 0, 0.6);
-        }
+          background-color: rgba(0, 0, 0, 0.6); /*Applies a dark semi-transparent background on hover*/
+        } 
       }
 
       .nav-links {
@@ -92,7 +96,7 @@
       .nav-links > li > a:hover {
         color: hsl(40, 100%, 70%);
       }
-      @media (min-width: 30em) {
+      @media (min-width: 30em) { /*Overrides the flexbox from mobile styles to make links stack vertically*/
         .nav-links {
           display: block;
           padding: 1em;
