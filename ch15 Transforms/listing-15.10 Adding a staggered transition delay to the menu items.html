@@ -1,8 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transforms</title>
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Raleway" rel="stylesheet">
     <style type="text/css">
+      /*Adding a staggered transition delay to the menu items*/
 
       html {
         box-sizing: border-box;
@@ -115,6 +119,18 @@
         .nav-links a:focus > .nav-links__label {
           opacity: 1;
           transform: translate(0);
+        }
+        .nav-links > li:nth-child(2) .nav-links__label { /*Targets the second menu item label*/
+          transition-delay: 0.1s;
+        }
+        .nav-links > li:nth-child(3) .nav-links__label { /*Delays its transition by one tenth of a second*/
+          transition-delay: 0.2s;
+        }
+        .nav-links > li:nth-child(4) .nav-links__label { /*Delays its transition by two tenths of a second*/
+          transition-delay: 0.3s;
+        }
+        .nav-links > li:nth-child(5) .nav-links__label { /*Repeat as many times as needed*/
+          transition-delay: 0.4s;
         }
 
         .nav-links__icon {

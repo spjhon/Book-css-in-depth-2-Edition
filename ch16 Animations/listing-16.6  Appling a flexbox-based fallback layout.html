@@ -1,8 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animations</title>
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Raleway" rel="stylesheet">
     <style type="text/css">
+      /* Appling a flexbox-based fallback layout*/
 
       html {
         box-sizing: border-box;
@@ -24,7 +28,7 @@
       }
 
       h1, h2, h3 {
-        font-family: Alfa Slab One, serif;
+        font-family: "Alfa Slab One", serif;
         font-weight: 400;
       }
 
@@ -144,30 +148,17 @@
       }
 
       @media (min-width: 30em) {
-        .flyin-grid {
+        .flyin-grid { /*Responsive breakpoint*/
           display: flex;
-          flex-wrap: wrap;
-          margin: 0 5rem;
+          flex-wrap: wrap; /*Establishes the flex container with wrapping*/
+          margin: 0 5rem; /*Increases padding on sides*/
         }
 
         .flyin-grid__item {
-          flex: 1 1 300px;
+          flex: 1 1 300px; /*Enables flex-grow and sets a flex-basis of 300 px*/
           margin-left: 0.5em;
           margin-right: 0.5em;
           max-width: 600px;
-        }
-
-        @supports (display: grid) {
-          .flyin-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-gap: 2em;
-          }
-
-          .flyin-grid__item {
-            max-width: initial;
-            margin: 0;
-          }
         }
       }
 

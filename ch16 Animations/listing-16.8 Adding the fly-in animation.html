@@ -1,8 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animations</title>
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Raleway" rel="stylesheet">
     <style type="text/css">
+      /*Adding the fly-in animation*/
 
       html {
         box-sizing: border-box;
@@ -140,7 +144,12 @@
       }
 
       .flyin-grid {
-        margin: 0 1rem;
+        margin: 0 1rem; /*Sets a shared perspective on the container*/
+        perspective: 500px;
+      }
+
+      .flyin-grid__item {
+        animation: fly-in 600ms ease-in; /*Applies animation to each item*/
       }
 
       @media (min-width: 30em) {
@@ -156,6 +165,19 @@
           margin-right: 0.5em;
           max-width: 600px;
         }
+
+        @supports (display: grid) {
+          .flyin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 2em;
+          }
+
+          .flyin-grid__item {
+            max-width: initial;
+            margin: 0;
+          }
+        }
       }
 
       .card {
@@ -167,6 +189,20 @@
       }
       .card > img {
         width: 100%;
+      }
+
+      @keyframes fly-in {
+        0% {
+          transform: translateZ(-800px) rotateY(90deg); /*Starts in the distance, rotated*/
+          opacity: 0;
+        }
+        56% {
+          transform: translateZ(-160px) rotateY(87deg); /*Much closer, but still mostly rotated*/
+          opacity: 1;
+        }
+        100% {
+          transform: translateZ(0) rotateY(0); /*Finishes in normal position*/
+        }
       }
 
     </style>

@@ -260,3 +260,19 @@ This chapter covers
 - Adding a “bounce” effect to a transition
 - The browser’s rendering pipeline
 - Looking at 3D transforms and perspective
+
+Summary
+
+- Use transforms to scale, rotate, translate, and skew elements in two and three dimensions.
+- Transforms are essential for performant transitions and animations.
+- Understand how the rendering pipeline works and keep it in mind when building animations.
+- To use a custom timing function curve to add a bounce effect to transitions.
+
+Chapter 16: Animations
+
+This chapter covers
+
+- Adding complex motion to the page with keyframe animations
+- Playing animations when the page loads
+- Using a spinner animation to provide feedback
+- Drawing attention to a save button to remind the user to save

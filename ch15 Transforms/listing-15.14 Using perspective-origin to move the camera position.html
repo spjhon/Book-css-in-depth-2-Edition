@@ -1,12 +1,16 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transforms</title>
     <style type="text/css">
-
+/*Using perspective-origin to move the camera position*/
       .row {
-        display: flex;
+        display: flex; /*Moves camera position to the element’s bottom left*/
         justify-content: center;
         perspective: 200px;
+        perspective-origin: left bottom;
       }
 
       .box {
