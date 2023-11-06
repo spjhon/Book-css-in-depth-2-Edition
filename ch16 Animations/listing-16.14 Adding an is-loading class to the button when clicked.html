@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animations</title>
     <style type="text/css">
 
     body {
@@ -71,14 +74,15 @@
     </form>
 
 <script type="text/javascript">
-var input = document.getElementById('trip');
-var button = document.getElementById('submit-button');
+let input = document.getElementById('trip');
+let button = document.getElementById('submit-button');
 
 button.addEventListener('click', function(event) {
-  event.preventDefault();
-  button.classList.add('is-loading');
+  event.preventDefault(); /*Prevents form submission*/
+  button.classList.add('is-loading'); /*Displays loading spinner*/
   button.disabled = true;
   input.disabled = true;
+  /*in this part you add code to submit the data*/
 });
 </script>
   </body>

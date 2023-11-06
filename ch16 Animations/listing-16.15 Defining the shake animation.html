@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animations</title>
     <style type="text/css">
 
     body {
@@ -66,7 +69,7 @@
       }
     }
 
-    @keyframes shake {
+    @keyframes shake { /*Uses the same keyframe definition at multiple points during the animation*/
       0%,
       100% {
         transform: translateX(0);
@@ -75,18 +78,18 @@
       30%,
       50%,
       70% {
-        transform: translateX(-0.4em);
+        transform: translateX(-0.4em); /*Shifts the element left*/
       }
       20%,
       40%,
       60% {
-        transform: translateX(0.4em);
+        transform: translateX(0.4em); /*Shifts the element right*/
       }
       80% {
         transform: translateX(0.3em);
       }
       90% {
-        transform: translateX(-0.3em);
+        transform: translateX(-0.3em); /*Reduces the movement for the final shake*/
       }
     }
     </style>
@@ -95,31 +98,18 @@
     <form>
       <label for="trip">Tell us about your first trip to the zoo:</label>
       <textarea id="trip" name="about-my-trip" rows="5"></textarea>
-      <button type="submit" id="submit-button">Save</button>
+      <button type="submit" id="submit-button" class="shake">Save</button>
     </form>
 
 <script type="text/javascript">
 var input = document.getElementById('trip');
 var button = document.getElementById('submit-button');
 
-var timeout = null;
-
 button.addEventListener('click', function(event) {
   event.preventDefault();
-  clearTimeout(timeout);
   button.classList.add('is-loading');
   button.disabled = true;
   input.disabled = true;
-});
-
-input.addEventListener('keyup', function() {
-  clearTimeout(timeout);
-  timeout = setTimeout(function() {
-    button.classList.add('shake');
-  }, 1000);
-});
-button.addEventListener('animationend', function() {
-  button.classList.remove('shake');
 });
 </script>
   </body>

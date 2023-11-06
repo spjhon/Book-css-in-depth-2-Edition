@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animations</title>
     <style type="text/css">
 
     body {
@@ -95,18 +98,31 @@
     <form>
       <label for="trip">Tell us about your first trip to the zoo:</label>
       <textarea id="trip" name="about-my-trip" rows="5"></textarea>
-      <button type="submit" id="submit-button" class="shake">Save</button>
+      <button type="submit" id="submit-button">Save</button>
     </form>
 
 <script type="text/javascript">
-var input = document.getElementById('trip');
-var button = document.getElementById('submit-button');
+let input = document.getElementById('trip');
+let button = document.getElementById('submit-button');
+
+let timeout = null; /*Defines a variable to refer to your timeout*/
 
 button.addEventListener('click', function(event) {
   event.preventDefault();
+  clearTimeout(timeout); /*Cancels the pending timeout (if present)*/
   button.classList.add('is-loading');
   button.disabled = true;
   input.disabled = true;
+});
+
+input.addEventListener('keyup', function() {
+  clearTimeout(timeout); /*Adds the shake class after a 1-second wait*/
+  timeout = setTimeout(function() {
+    button.classList.add('shake');
+  }, 1000);
+});
+button.addEventListener('animationend', function() { /*Removes the shake class after the animation ends*/
+  button.classList.remove('shake');
 });
 </script>
   </body>
